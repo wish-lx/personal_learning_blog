@@ -1,0 +1,29 @@
+{
+  "name": "personal_learning_blog",
+  "version": "1.0.0",
+  "description": "真正的学习是从兴趣开始的，永远不要停止思考，永远不认输",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "sh build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wish-lx/personal_learning_blog.git"
+  },
+  "keywords": [
+    "web",
+    "JavaScript"
+  ],
+  "author": "Sunny_Z",
+  "license": "ISC",
+  "homepage": "https://github.com/wish-lx/personal_learning_blog#readme",
+  "dependencies": {
+    "vuepress": "^1.0.2"
+  },
+  "devDependencies": {}
+  
+}
