@@ -23,15 +23,7 @@ module.exports = {
         lastUpdated: '上次更新',
         nav: [],
         sidebar: [
-            {
-                title: 'list',
-                collapsable: false,
-                children: [
-                    ['list/', '一面'],
-                    'list/listOne'
-                    
-                ]
-            },
+            
             {
                 title: 'js',
                 collapsable: false,
@@ -45,7 +37,7 @@ module.exports = {
                 ]
             },
             {
-                title: 'vue',
+                title: 'Vue',
                 collapsable: false,
                 children: [
                     ['vue/', 'vue相关试题']
@@ -62,6 +54,7 @@ module.exports = {
                     
                 ]
             },
+            
             {
                 title: 'webpack',
                 collapsable: false,
@@ -79,9 +72,18 @@ module.exports = {
                 children: [
                     ['Interview/', 'Introduction'],
                     'Interview/beikong',
-                    'Interview/testList',
+                    'Interview/testList'
                     // 'Interview/loader',
                     // 'Interview/plugins'
+                ]
+            },
+            {
+                title: '复习题纲',
+                collapsable: false,
+                children: [
+                    ['list/', '一面'],
+                    'list/listOne'
+                    
                 ]
             }
         ]
