@@ -1,0 +1,34 @@
+## this指向
+1. 事实上，调用函数会创建新的属于函数自身的执行上下文。执行上下文的调用创建阶段会决定 this的指向。到此，我们可以得出的一个结论：this 的指向，是在调用函数时根据执行上下文所动态确定的。
+
+具体环节和规则，可以先“死记硬背”以下几条规律，后面再慢慢一一分析：
+ - 在函数体中，简单调用该函数时（非显式/隐式绑定下），严格模式下 this 绑定到 undefined，否则绑定到全局对象 window／ 。     global；
+ - 2.一般构造函数 new 调用，绑定到新创建的对象上（如果构造函数中显式返回一个值，且返回的是一个对象，那么 this 就指向这个返回的对象；如果返回的不是一个对象，那么 this 仍然指向实例。）；
+- 一般由 call/apply/bind 方法显式调用，绑定到指定参数的对象上；
+ - 一般由上下文对象调用，绑定在该对象上；
+- 箭头函数中，根据外层上下文绑定的 this 决定 this 指向。（箭头函数使用 this 不适用以上标准规则，而是根据外层（函数或者全局）上下文来决定。）
+- 定时器（setTimeout.setInterval）绑定，指向window  
+
+2. new 操作符调用构造函数，具体做了什么？以下供参考：
+ - 创建一个新的对象；
+ - 将构造函数的 this 指向这个新对象；
+ - 为这个对象添加属性、方法等；
+ - 最终返回新对象。
+
+ var scope = "global"
+ function myFunction(){
+     console.log(scope);
+     var scope = "local"
+ }
+
+ for(var i=1;i<3;i++){
+     setTImeout(function(){
+         console.log(i)
+     },0)
+ }
+
+console.log（1+'2'+'2')
+console.log('1' - 0 + 9)
+console.log('A' - 'B')
+console.log('xx' == new String('xx'))
+console.log(0.2+0.1==0.3)

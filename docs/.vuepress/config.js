@@ -24,6 +24,45 @@ module.exports = {
         nav: [],
         sidebar: [
             {
+                title: 'list',
+                collapsable: false,
+                children: [
+                    ['list/', '一面'],
+                    'list/listOne'
+                    
+                ]
+            },
+            {
+                title: 'js',
+                collapsable: false,
+                children: [
+                    ['chain/', '原型链'],
+                    'chain/eventloop',
+                    'chain/settimeout',
+                    'chain/range',
+                    'chain/this',
+                    
+                ]
+            },
+            {
+                title: 'vue',
+                collapsable: false,
+                children: [
+                    ['vue/', 'vue相关试题']
+                    // 'Vue/listOne'
+                    
+                ]
+            },
+            {
+                title: '异步',
+                collapsable: false,
+                children: [
+                    ['async/', 'async'],
+                    'async/promise'
+                    
+                ]
+            },
+            {
                 title: 'webpack',
                 collapsable: false,
                 children: [
@@ -32,6 +71,17 @@ module.exports = {
                     'webpack/output',
                     'webpack/loader',
                     'webpack/plugins'
+                ]
+            },
+            {
+                title: 'Interview',
+                collapsable: false,
+                children: [
+                    ['Interview/', 'Introduction'],
+                    'Interview/beikong',
+                    // 'Interview/output',
+                    // 'Interview/loader',
+                    // 'Interview/plugins'
                 ]
             }
         ]
