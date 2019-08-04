@@ -72,8 +72,8 @@ module.exports = {
                 children: [
                     ['Interview/', 'Introduction'],
                     'Interview/beikong',
-                    'Interview/testList'
-                    // 'Interview/loader',
+                    'Interview/testList',
+                    'Interview/css'
                     // 'Interview/plugins'
                 ]
             },
