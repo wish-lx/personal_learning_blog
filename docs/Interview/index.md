@@ -296,8 +296,9 @@ Object.assign：用于对象的合并，将源对象（source）的所有可枚�
 **拷贝所有层级:**
 1. 不仅拷贝第一层级，还能够拷贝数组或对象所有层级的各项值
 2. 不是单独针对数组或对象，而是能够通用于数组，对象和其他复杂的JSON形式的对象
+   - JSON.parse(JSON.stringify(XXXX))
+
 ```
-1.JSON.parse(JSON.stringify(XXXX))
 
 var array = [
     { number: 1 },
@@ -309,6 +310,31 @@ copyArray[0].number = 100;
 console.log(array); //  [{number: 1}, { number: 2 }, { number: 3 }]
 console.log(copyArray); // [{number: 100}, { number: 2 }, { number: 3 }]
 ```
+   - 我们怎么去实现深拷贝呢，这里可以递归递归去复制所有层级属性。
 
+这么我们封装一个深拷贝的函数(PS：只是一个基本实现的展示，并非最佳实践)
+```
+function deepClone(obj){
+    let objClone = Array.isArray(obj)?[]:{};
+    if(obj && typeof obj==="object"){
+        for(key in obj){
+            if(obj.hasOwnProperty(key)){
+                //判断ojb子元素是否为对象，如果是，递归复制
+                if(obj[key]&&typeof obj[key] ==="object"){
+                    objClone[key] = deepClone(obj[key]);
+                }else{
+                    //如果不是，简单复制
+                    objClone[key] = obj[key];
+                }
+            }
+        }
+    }
+    return objClone;
+}    
+let a=[1,2,3,4],
+    b=deepClone(a);
+a[0]=2;
+console.log(a,b);
+```
 
 

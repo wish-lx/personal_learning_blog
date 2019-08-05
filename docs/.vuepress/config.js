@@ -73,8 +73,8 @@ module.exports = {
                     ['Interview/', 'Introduction'],
                     'Interview/beikong',
                     'Interview/testList',
-                    'Interview/css'
-                    // 'Interview/plugins'
+                    'Interview/css',
+                    'Interview/highjs'
                 ]
             },
             {
