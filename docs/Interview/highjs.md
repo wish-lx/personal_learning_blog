@@ -70,4 +70,23 @@ Promise.race([p1, p2]).then((result) => {
   - 宏任务：包括整体代码script，setTimeout，setInterval。
   - 微任务：Promise，process.nextTick。
 ## 深拷贝与浅拷贝
-  
+## Object.create()底层实现原理
+  - 通过Object.create()方法创建一个新对象，使新对象的__proto__原型指向通过create传入的对象
+```
+  let foo = {
+      age:10
+  };
+  let f = Object.create(foo);
+  console.log(f.age);//10
+
+create的内部原理:
+  Object.create => function(obj){
+      var f = function(){};
+      f.prototype = obj;
+      return new f();
+  }
+```
+  1. 先在内部创建一个空构造函数
+  2. 把构造函数的原型指向传进来的obj对象
+  3. 通过new创建对象并返回
+
