@@ -15,56 +15,7 @@
     1. 编译时加载
     2. 只引用定义
     3. 按需加载
-# promise.all
- 1. Promise.all可以将多个Promise实例包装成一个新的Promise实例。同时，成功和失败的返回值是不同的，成功的时候返回的是一个结果数组，而失败的时候则返回最先被reject失败状态的值。
- 具体代码如下：
- ```
-let p1 = new Promise((resolve, reject) => {
-  resolve('成功了')
-})
 
-let p2 = new Promise((resolve, reject) => {
-  resolve('success')
-})
-
-let p3 = Promse.reject('失败')
-
-Promise.all([p1, p2]).then((result) => {
-  console.log(result)               //['成功了', 'success']
-}).catch((error) => {
-  console.log(error)
-})
-
-Promise.all([p1,p3,p2]).then((result) => {
-  console.log(result)
-}).catch((error) => {
-  console.log(error)      // 失败了，打出 '失败'
-})
-```
-**需要特别注意的是，Promise.all获得的成功结果的数组里面的数据顺序和Promise.all接收到的数组顺序是一致的.
-Promse.all在处理多个异步处理时非常有用，比如说一个页面上需要等两个或多个ajax的数据回来以后才正常显示，在此之前只显示loading图标。**
-# promise.race
-1. 顾名思义，Promse.race就是赛跑的意思，意思就是说，Promise.race([p1, p2, p3])里面哪个结果获得的快，就返回那个结果，不管结果本身是成功状态还是失败状态。
-```
-let p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('success')
-  },1000)
-})
-
-let p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    reject('failed')
-  }, 500)
-})
-
-Promise.race([p1, p2]).then((result) => {
-  console.log(result)
-}).catch((error) => {
-  console.log(error)  // 打开的是 'failed'
-})
-```
-原理是挺简单的，但是在实际运用中还没有想到什么的使用场景会使用到。
 ## 事件轮询
 ## 宏任务微任务
   - 宏任务：包括整体代码script，setTimeout，setInterval。
@@ -89,4 +40,9 @@ create的内部原理:
   1. 先在内部创建一个空构造函数
   2. 把构造函数的原型指向传进来的obj对象
   3. 通过new创建对象并返回
+## new操作符
+   1. 当代码 new Foo(...) 执行时，会发生以下事情：
 
+    - 一个继承自 Foo.prototype 的新对象被创建。
+    - 使用指定的参数调用构造函数 Foo，并将 this 绑定到新创建的对象。new Foo 等同于 new Foo()，也就是没有指定参数列表，Foo 不带任何参数调用的情况。
+    - 由构造函数返回的对象就是 new 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤1创建的对象。（一般情况下，构造函数不返回值，但是用户可以选择主动返回对象，来覆盖正常的对象创建步骤）

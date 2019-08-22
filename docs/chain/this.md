@@ -9,26 +9,4 @@
 - 箭头函数中，根据外层上下文绑定的 this 决定 this 指向。（箭头函数使用 this 不适用以上标准规则，而是根据外层（函数或者全局）上下文来决定。）
 - 定时器（setTimeout.setInterval）绑定，指向window  
 
-2. new 操作符调用构造函数，具体做了什么？以下供参考：
- - 创建一个新的对象；
- - 将构造函数的 this 指向这个新对象；
- - 为这个对象添加属性、方法等；
- - 最终返回新对象。
-
- var scope = "global"
- function myFunction(){
-     console.log(scope);
-     var scope = "local"
- }
-
- for(var i=1;i<3;i++){
-     setTImeout(function(){
-         console.log(i)
-     },0)
- }
-
-console.log（1+'2'+'2')
-console.log('1' - 0 + 9)
-console.log('A' - 'B')
-console.log('xx' == new String('xx'))
-console.log(0.2+0.1==0.3)
+ 

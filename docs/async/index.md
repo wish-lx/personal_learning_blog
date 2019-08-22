@@ -27,9 +27,11 @@
 ###### 栗子:
 ```
 【No1】await返回非promise
-async function func1(){    console.log('func1');
+async function func1(){    
+    console.log('func1');
     var a = await func2(); //当await返回非promise
-    console.log('func1 return');}
+    console.log('func1 return');
+}
 function func2(){
     console.log('func2');
 } //返回undefined

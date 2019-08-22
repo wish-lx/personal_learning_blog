@@ -105,3 +105,26 @@ var b=a;
 b=[1,2,3,4]
 alert(a)//结果为[1,2,3]
 ```
+## null和undefined区别
+1. 含义不同
+- undefined：表示使用var声明变量但未对其加以初始化时，这个变量的值就是undefined
+- null：是一个空对象指针，表示准备用来保存对象，还没有真正保存对象的值，
+- 如果定义的变量准备在将来用于保存对象，应该将该变量初始化为null。
+2. 类型不同
+```
+console.log(typeOf undefined);//undefined
+console.log(typeOf null);//object
+```
+3. 转化为数字不同
+  undefined: NaN
+  null: 0
+
+
+  
+
+  vfor  key的作用
+  filter
+  
+  babel做了些什么
+  webpack
+  了解seo吗

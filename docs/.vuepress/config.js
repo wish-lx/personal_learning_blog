@@ -23,7 +23,55 @@ module.exports = {
         lastUpdated: '上次更新',
         nav: [],
         sidebar: [
-            
+            {
+                title: '性能优化',
+                collapsable: false,
+                children: [
+                    ['性能优化/', '性能优化相关']
+                ]
+            },
+            {
+                title: '兼容性问题',
+                collapsable: false,
+                children: [
+                    ['兼容性问题/', '性能优化相关']
+                ]
+            },
+            {
+                title: '浏览器缓存',
+                collapsable: false,
+                children: [
+                    ['浏览器缓存/', '浏览器缓存']
+                ]
+            },
+            {
+                title: '浏览器渲染',
+                collapsable: false,
+                children: [
+                    ['浏览器渲染/', 'index']
+                ]
+            },
+            {
+                title: '封装方法',
+                collapsable: false,
+                children: [
+                    ['封装方法/', '封装方法']
+                ]
+            },
+            {
+                title: '代码题',
+                collapsable: false,
+                children: [
+                    ['代码题/', '代码题']
+                ]
+            },
+            {
+                title: 'ES6',
+                collapsable: false,
+                children: [
+                    ['ES6/', 'ES6']
+                ]
+            },
             {
                 title: 'js',
                 collapsable: false,
@@ -37,11 +85,17 @@ module.exports = {
                 ]
             },
             {
+                title: 'CSS',
+                collapsable: false,
+                children: [
+                    ['CSS/', 'CSS']
+                ]
+            },
+            {
                 title: 'Vue',
                 collapsable: false,
                 children: [
                     ['vue/', 'vue相关试题']
-                    // 'Vue/listOne'
                     
                 ]
             },
@@ -75,17 +129,19 @@ module.exports = {
                     'Interview/testList',
                     'Interview/css',
                     'Interview/highjs'
+
                 ]
             },
             {
-                title: '复习题纲',
+                title: '知识体系总结',
                 collapsable: false,
                 children: [
-                    ['list/', '一面'],
-                    'list/listOne'
+                    ['知识体系总结/', '一面'],
+                    '知识体系总结/listOne'
                     
                 ]
             }
+            
         ]
     }
 }
