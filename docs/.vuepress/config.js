@@ -81,6 +81,7 @@ module.exports = {
                     'chain/settimeout',
                     'chain/range',
                     'chain/this',
+                    'chain/Array'
                     
                 ]
             },
@@ -125,9 +126,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                     ['Interview/', 'Introduction'],
-                    'Interview/beikong',
                     'Interview/testList',
-                    'Interview/css',
                     'Interview/highjs'
 
                 ]
@@ -145,3 +144,5 @@ module.exports = {
         ]
     }
 }
+
+

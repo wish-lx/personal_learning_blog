@@ -1,10 +1,41 @@
 
 # vue 
+## vue.use 内部原理
+   ```
+   vue.use 内部暴露一个install方法，这个方法的第一个参数是Vue构造器，第二个选项是可选的选项对象
+   myPlugin.install=function(Vue,options){
+     // 1. 添加全局方法或属性
+      Vue.myGlobalMethod = function () {
+        // 逻辑...
+      }
+      // 2. 定义全局指令
+    Vue.directive('my-directive', {
+      bind (el, binding, vnode, oldVnode) {
+        // 逻辑...
+      }
+      ...
+    })
+    // 3. 全局混入mixin
+    Vue.mixin({
+      created: function () {
+        // 逻辑...
+      }
+      ...
+    })
+
+    // 4. 添加实例方法
+    Vue.prototype.$myMethod = function (methodOptions) {
+      // 逻辑...
+    }
+    // 5. 注册全局组件
+      Vue.component()
+   }
+   ```
 ## 虚拟dom相关
 ```
  1. 为什么要有虚拟dom
    - 每次DOM操作会引起重绘或者回流，频繁的真实DOM的修改会触发多次的排版和重绘相当耗性能
-   - 使用虚拟dom属性少，真是dom属性多
+   - 使用虚拟dom属性少，真实dom属性多
  2. 虚拟dom是什么
    - 虚拟DOM就是一个JS对象，用一个js对象来描述真实的DOM
  3. 虚拟dom为什么会提高性能
