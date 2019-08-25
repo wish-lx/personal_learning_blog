@@ -105,7 +105,8 @@ module.exports = {
                 collapsable: false,
                 children: [
                     ['async/', 'async'],
-                    'async/promise'
+                    'async/promise',
+                    'async/shouxiePromise'
                     
                 ]
             },
