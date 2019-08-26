@@ -41,7 +41,9 @@ module.exports = {
                 title: '浏览器缓存',
                 collapsable: false,
                 children: [
-                    ['浏览器缓存/', '浏览器缓存']
+                    ['浏览器缓存/', '浏览器缓存相关'],
+                    '浏览器缓存/cachingMode'
+
                 ]
             },
             {
