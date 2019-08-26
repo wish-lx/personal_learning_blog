@@ -96,8 +96,6 @@ axios.interceptors.reponse.use(function(response){
           query:
         })
       }
-      
-
     }
  })
 ```
@@ -116,4 +114,40 @@ this.$post(url).then(function(res){
 }).catch(function(err){
   console.log(err)
 })
+```
+
+```
+export function post(url, data={}){
+  return new Promise(resolve, reject){
+    axios.post(url, data)
+    .then(response=>{
+      return response(data)
+    },err=>{
+      reject(err)
+    })
+  }
+}
+import axios from 'axios'
+import {post} from ''
+Vue.prototype.$post = post
+mounted{
+  this.axios.$post(url).then(res=>{
+    console.log(res)
+  })
+}
+
+拦截器：
+axios.interceptors.request.use(function(config){
+  // 判断是否存在token
+
+},function(err){
+  return Promise.reject(err)
+})
+axios.interceptors.response.use(function(res){
+  <!-- 停止动画操作 -->
+},function(err){
+  <!-- 如果响应码是401，则返回登陆页面 -->
+  return Promise reject(err)
+})
+
 ```
