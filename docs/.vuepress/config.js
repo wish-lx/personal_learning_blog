@@ -54,6 +54,13 @@ module.exports = {
                 ]
             },
             {
+                title: '算法相关',
+                collapsable: false,
+                children: [
+                    ['算法相关/', 'index']
+                ]
+            },
+            {
                 title: '封装方法',
                 collapsable: false,
                 children: [
