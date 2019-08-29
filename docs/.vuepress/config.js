@@ -102,6 +102,13 @@ module.exports = {
                 ]
             },
             {
+                title: 'less',
+                collapsable: false,
+                children: [
+                    ['less/', 'index']
+                ]
+            },
+            {
                 title: 'Vue',
                 collapsable: false,
                 children: [

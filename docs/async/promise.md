@@ -327,3 +327,26 @@ function promiseClick1(){
 race的使用比如可以使用在一个请求在10s内请求成功的话就走then方法，如果10s内没有请求成功的话进入reject回调执行另一个操作
 
 **Promise也有一些缺点。首先，无法取消Promise，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。第三，当处于pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。**
+
+
+## 轮询相关题
+```
+for(var i=0;i<5;i++){
+  setTimeout(()=>{
+  console.log(i)
+})
+}
+5 5 5 5 5
+因为同步队列的for循环执行完成才轮到异步队列， 每一次for循环的时候，settimeout都执行一次，但是里面的function（闭包函数）没有被执行，而是被放到了任务队列里面，等待执行，当i累加到5的时候跳出循环。此时全局只有一个变量i=>5，所以打印出来都是5
+
+for (let i = 0; i < 5; i++) {     //let 代替 var
+    setTimeout(function (){
+        console.log(i);  
+     },1000);  
+}
+// 0 1 2 3 4
+let 为代码块的作用域，所以每一次 for 循环，console.log(i); 都引用到 for 代码块作用域下的i，因为这样被引用，所以 for 循环结束后，这些作用域在 setTimeout 未执行前都不会被释放。
+
+
+
+```
