@@ -2,6 +2,7 @@
 # vue 
 ## vue自定义指令
 1. 全局自定义指令：
+```
    Vue.directive('demo',{
      bind: function(el,binding,vnode,oldVnode){
 
@@ -19,7 +20,9 @@
       
      }
    })
+   ```
 2. 组件内自定义指令
+```
   directive:{
     demo:{
       inserted: function(el){
@@ -27,10 +30,10 @@
       }
     }
   }
-
-常用钩子函数： bind  unbind   inserted   update componentsUpdated
-常用钩子函数参数： el  binding vnode oldvnode
-binding里面常用参数： name  value oldvalue  expression args modifiers 
+```
+- 常用钩子函数： bind  unbind   inserted   update componentsUpdated
+- 常用钩子函数参数： el  binding vnode oldvnode
+- binding里面常用参数： name  value oldvalue  expression args modifiers 
 ## vue.use 内部原理
    ```
    vue.use 内部暴露一个install方法，这个方法的第一个参数是Vue构造器，第二个选项是可选的选项对象
