@@ -24,7 +24,9 @@
 1. state数据
 2. jsx模版
 3.  生成虚拟dom(虚拟dom就是一个js对象，用来描述真实的dom)---损耗性能
+```
 ['div',{id:'abc'},['span',{},'hello']]
+```
 
 4. 用虚拟dom结构生成真实的dom来显示
 ```
@@ -32,7 +34,9 @@
 ```
 5. state数据发生变化
 6. 数据+ 模版 生成新的虚拟dom （极大的提升了性能）
+```
 ['div',{id:'abc'},['span',{},'aaa']]
+```
 7. 比较原始虚拟dom和新的虚拟dom的区别，找到是span中的内容发生了改变（极大的提升了性能 ）--》 diff
 8. 直接操作dom，改变span中的内容
 ## imutable
@@ -40,7 +44,7 @@
 ## 传参
 1. 父向子： 
 ```
-父组件：<TodoItem content = {item}></TodoItem>
+父组件：  <TodoItem content = {item}></TodoItem>
 子组件：  <li>{this.props.content}</li>
 ```
 2. 子向父：
@@ -63,8 +67,7 @@ render(){
     }
     父组件子组件相应的方法记得绑定相应的this实例
 ```
-## tips
- 1. 
+## tips 
  ```
  dangerouslySetInnerHTML={{__html: item}} 
  用来处理带标签的数据，但是容易导致XSS攻击
@@ -75,18 +78,18 @@ render(){
  ## react的生命周期函数
  1. initialization（初始化): setup state and props
  2. Mounting(挂载)：
-    componentWillMount：组件被挂载到页面之前，自动被执行（只在**第一次挂载**时执行）
-    render： 挂载
-    componentDidMount: 组件被挂载到页面之后，自动被执行（只在**第一次挂载**时执行）
+    - componentWillMount：组件被挂载到页面之前，自动被执行（只在**第一次挂载**时执行）
+    - render： 挂载
+    - componentDidMount: 组件被挂载到页面之后，自动被执行（只在**第一次挂载**时执行）
 3. updating：
-   prop：shouldComponentUpdate  true--》componentWillUpdate--》render--》componentDidUpdate
-   states： shouldComponentUpdate  true--》componentWillUpdate--》render--》componentDidUpdate
+   - prop：shouldComponentUpdate  true--》componentWillUpdate--》render--》componentDidUpdate
+   - states： shouldComponentUpdate  true--》componentWillUpdate--》render--componentDidUpdate
 
 
-   componentWillReceiveProps--》 1.一个组件要从父组件接收参数 2.这个组件的render函数再次被渲染（不是首次）
-   shouldComponentUpdate--》组件在更新之前，自动会执行
-   componentWillUpdate--》组件被更新之前，自动会执行（在shouldComponentUpdate 执行，返回true 之后执行，返回false则不执行）
-   render--》
-   componentDidUpdate--》组件被更新之后，自动会执行
+   - componentWillReceiveProps--》 1.一个组件要从父组件接收参数 2.这个组件的render函数再次被渲染（不是首次）
+   - shouldComponentUpdate--》组件在更新之前，自动会执行
+   - componentWillUpdate--》组件被更新之前，自动会执行（在shouldComponentUpdate 执行，返回true 之后执行，返回false则不执行）
+   - render--》
+   - componentDidUpdate--》组件被更新之后，自动会执行
 4. UnMounting: 
-   componentWillUnmounting: 当这个组件即将从页面中被剔除时，自动被执行
+   - componentWillUnmounting: 当这个组件即将从页面中被剔除时，自动被执行
