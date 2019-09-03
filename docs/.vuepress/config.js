@@ -117,6 +117,14 @@ module.exports = {
                 ]
             },
             {
+                title: 'React',
+                collapsable: false,
+                children: [
+                    ['react/', 'react']
+                    
+                ]
+            },
+            {
                 title: '异步',
                 collapsable: false,
                 children: [
