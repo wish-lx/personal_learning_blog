@@ -5,6 +5,7 @@
 4. 单向数据流 
 5. 视图层框架   
 6. 函数式编程
+7. 数据驱动
 ## 生态介绍：
 - Vue：Vue + Vue-Router + Vuex + Axios + Babel + Webpack
 - React：React + React-Router+ Redux + Axios + Babel + Webpack
@@ -16,6 +17,9 @@
 ## propsTypes  defaultProps
 1. propsTypes： 要求父组件在给子组件传值的时候，要求传值的类型是什么样子的
 2. defaultProps：当父组件某个参数未传时，子组件自己设置默认值
+## props state render函数的关系（解释react数据驱动，数据变化，页面就跟着变化）
+1. 当组件的state或者props发生改变的时候，render函数就会重新执行，页面就会重新渲染
+2. 当父组件的render函数被运行时，子组件的render函数也会被运行
 ## imutable
  1. 不允许我们直接修改state的数据，如果想要修改可以复制一个副本
 ## 传参
