@@ -93,3 +93,8 @@ render(){
    - componentDidUpdate--》组件被更新之后，自动会执行
 4. UnMounting: 
    - componentWillUnmounting: 当这个组件即将从页面中被剔除时，自动被执行
+## 性能优化点
+1. shouldComponentUpdate： 可以避免无谓的render组件的运行
+2. constructor中函数的作用域的绑定： 保证这个作用域的绑定只会执行一次，而且可以避免一些子组件无谓的渲染
+3. setState是一个异步过程，可以把多次虚拟dom的比对结合成一次来做，降低虚拟dom比对的频率
+4. 虚拟dom  同层比对 key值
