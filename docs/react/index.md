@@ -1,5 +1,11 @@
 ## react 
-生态介绍：
+1. 声明式开发： 减少操作dom
+2. 可以与其他框架并存  jquery等
+3. 组件化
+4. 单向数据流 
+5. 视图层框架   
+6. 函数式编程
+## 生态介绍：
 - Vue：Vue + Vue-Router + Vuex + Axios + Babel + Webpack
 - React：React + React-Router+ Redux + Axios + Babel + Webpack
 ## jsx
