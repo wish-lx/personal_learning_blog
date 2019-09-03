@@ -20,6 +20,20 @@
 ## props state render函数的关系（解释react数据驱动，数据变化，页面就跟着变化）
 1. 当组件的state或者props发生改变的时候，render函数就会重新执行，页面就会重新渲染
 2. 当父组件的render函数被运行时，子组件的render函数也会被运行
+## react中的虚拟dom
+1. state数据
+2. jsx模版
+3. 数据+模版 结合，生成真实的dom来显示
+```
+  <div id="abc"><span>hello</span></div>
+```
+4. 生成虚拟dom(虚拟dom就是一个js对象，用来描述真实的dom)---损耗性能
+['div',{id:'abc'},['span',{},'hello']]
+5. state数据发生变化
+6. 数据+ 模版 生成新的虚拟dom （极大的提升了性能）
+['div',{id:'abc'},['span',{},'aaa']]
+7. 比较原始虚拟dom和新的虚拟dom的区别，找到是span中的内容发生了改变（极大的提升了性能 ）
+8. 直接操作dom，改变span中的内容
 ## imutable
  1. 不允许我们直接修改state的数据，如果想要修改可以复制一个副本
 ## 传参
