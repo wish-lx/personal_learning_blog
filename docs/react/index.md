@@ -14,6 +14,8 @@
  3. jsx里面要使用js表达式要用{}包裹起来
  4. 修改数据要使用setState函数
 ## propsTypes  defaultProps
+1. propsTypes： 要求父组件在给子组件传值的时候，要求传值的类型是什么样子的
+2. defaultProps：当父组件某个参数未传时，子组件自己设置默认值
 ## imutable
  1. 不允许我们直接修改state的数据，如果想要修改可以复制一个副本
 ## 传参
