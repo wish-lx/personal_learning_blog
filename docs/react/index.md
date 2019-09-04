@@ -80,7 +80,7 @@ render(){
  2. Mounting(挂载)：
     - componentWillMount：组件被挂载到页面之前，自动被执行（只在**第一次挂载**时执行）
     - render： 挂载
-    - componentDidMount: 组件被挂载到页面之后，自动被执行（只在**第一次挂载**时执行）
+    - componentDidMount: 组件被挂载到页面之后，自动被执行（只在**第一次挂载**时执行）（**在这里发送ajax请求**）
 3. updating：
    - prop：shouldComponentUpdate  true--》componentWillUpdate--》render--》componentDidUpdate
    - states： shouldComponentUpdate  true--》componentWillUpdate--》render--componentDidUpdate

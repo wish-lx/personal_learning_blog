@@ -12,6 +12,12 @@ arr.forEach(item => set.add(item));
 console.log(set);  // 1, 2, 3, 4, 5
 // 数组快速去重
 console.log([...new Set(arr)]);  //[1, 2, 3, 4, 5]
+set.add(5) // 添加
+set.has(5) // 是否存在5
+set.delete(5) // 删除5
+set.cleat()   // 清除集合中所有元素
+set.size  // 长度
+
 ```
  - Map 对象是键值对集合，和 JSON 对象类似，但是 key 不仅可以是字符串还可以是对象
 ```
@@ -22,7 +28,9 @@ map.get(obj); // 小缘喵
 map.has(obj); // true
 map.delete(obj) ;// true
 map.has(obj); // false
-
+map.clear(); // 移除集合中所有的键值对
+map.size(); // 长度
+forEach
 ```
 # promise.all
  1. Promise.all可以将多个Promise实例包装成一个新的Promise实例。同时，成功和失败的返回值是不同的，成功的时候返回的是一个结果数组，而失败的时候则返回最先被reject失败状态的值。
