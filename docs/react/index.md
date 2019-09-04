@@ -68,6 +68,8 @@ render(){
     父组件子组件相应的方法记得绑定相应的this实例
 ```
 ## tips 
+1. ui组件负责页面渲染  容器组件负责逻辑  
+2. 
  ```
  dangerouslySetInnerHTML={{__html: item}} 
  用来处理带标签的数据，但是容易导致XSS攻击
