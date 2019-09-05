@@ -69,11 +69,47 @@ render(){
 ```
 ## tips 
 1. ui组件负责页面渲染  容器组件负责逻辑  
+ //使用redux-thunk
+    //    创建一个action
+      //  const action = getInputChange(e.target.value)
+    //    派发action
+      // store.dispatch(action)
 2. 
  ```
  dangerouslySetInnerHTML={{__html: item}} 
  用来处理带标签的数据，但是容易导致XSS攻击
  ``` 
+
+ 3.  Immutable的set方法，会结合之前immutable的值和设置的值，返回一个全新的对象
+ ```
+ case  actionType.INPUT_FOCUS:
+             //  Immutable的set方法，会结合之前immutable的值和设置的值，返回一个全新的对象
+            return state.set('foused', true)
+ ```
+ 4. 
+ React-Redux: 是Redux的官方React绑定库。它能够使你的React组件从Redux store中读取数据，并且向store分发actions以更新数据,常用的有provider  connect
+ react-router-dom  link
+  <!-- redux-thunk
+  redux-saga -->
+  
+  
+5. immutable: 
+- Immutable Data 就是一旦创建，就不能再被更改的数据。对 Immutable 对象的任何修改或添加删除操作都会返回一个新的 Immutable 对象
+- 由于是不可变的，可以放心的对对象进行任意操作。在 React 开发中，频繁操作state对象或是 store ，配合 immutableJS 快、安全、方便
+- 也就是使用旧数据创建新数据时，要保证旧数据同时可用且不变。同时为了避免 deepCopy 把所有节点都复制一遍带来的性能损耗，Immutable 使用了Structural Sharing（结构共享）
+- 常用API：
+fromJS()
+作用：将一个js数据转换为Immutable类型的数据
+用法：fromJS(value, converter)
+简介：value是要转变的数据，converter是要做的操作。第二个参数可不填，默认情况会将数组准换为List类型，将对象转换为Map类型，其余不做操作
+toJS()
+作用：将一个Immutable数据转换为JS类型的数据
+用法：value.toJS()
+set()
+作用：设置第一层key、index的值
+merge
+作用：浅合并，新数据与旧数据对比，旧数据中不存在的属性直接添加，就数据中已存在的属性用新数据中的覆盖
+
  ## diff算法
  1. 循环中引入key值是为了提高虚拟dom比对的性能，使用一个稳定的数值作为key值，不要使用index,index不稳定（为了使得旧的虚拟dom的值与新的虚拟dom的值保持一致）
  2. setState是一个**异步过程**，它可以把多次setState结合成一次setState,减少虚拟dom比对的次数，在比对的时候会有一个同层比较的概念，也就是diff算法在比较两个虚拟dom的时候，他会同层进行比较，如果一层不满足比对的要求，则不会再往下进行比对，直接就废弃掉，直接用新的替换掉，这样会大大的提升性能。
