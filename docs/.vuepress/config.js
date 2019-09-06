@@ -105,7 +105,8 @@ module.exports = {
                 title: 'less',
                 collapsable: false,
                 children: [
-                    ['less/', 'index']
+                    ['less/', 'index'],
+                    'less/reactless',
                 ]
             },
             {
