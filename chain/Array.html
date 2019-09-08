@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数组相关 | 个人学习博客</title>
+    <meta name="description" content="个人学习博客">
+    <link rel="icon" href="/personal_learning_blog/logo.png">
+  <link rel="manifest" href="/personal_learning_blog/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/personal_learning_blog/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/personal_learning_blog/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/personal_learning_blog/assets/css/0.styles.c5477ab4.css" as="style"><link rel="preload" href="/personal_learning_blog/assets/js/app.420859d6.js" as="script"><link rel="preload" href="/personal_learning_blog/assets/js/2.8eb86a6e.js" as="script"><link rel="preload" href="/personal_learning_blog/assets/js/14.f1608e8b.js" as="script"><link rel="prefetch" href="/personal_learning_blog/assets/js/10.5b292593.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/11.bc4c3461.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/12.6902c00c.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/13.3c4d5dda.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/15.8109f339.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/16.52c9736c.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/17.fc414205.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/18.d8de3987.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/19.c2f0f6a3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/20.428af1f6.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/21.94511eae.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/22.d52e4e10.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/23.d8b2be21.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/24.a1210960.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/25.f15371b3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/26.e4cced44.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/27.0cc672fa.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/28.d47d3c83.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/29.473e6a29.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/3.cf0a4665.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/30.7a93d3d5.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/31.0fc902e7.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/32.fa7ef45f.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/33.6c11ed80.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/34.46e924c3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/35.b1b3c24a.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/36.8b31cc82.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/37.1560e6a3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/38.9cce7315.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/39.60d3bcd5.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/4.7bf71852.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/5.1cc69f4b.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/6.ca1f9af8.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/7.7d6dcb26.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/8.6623db41.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/9.ba52b70e.js">
+    <link rel="stylesheet" href="/personal_learning_blog/assets/css/0.styles.c5477ab4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/personal_learning_blog/" class="home-link router-link-active"><!----> <span class="site-name">个人学习博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/wish-lx/personal_learning_blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/wish-lx/personal_learning_blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>性能优化</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="sidebar-link">性能优化相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>兼容性问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/" class="sidebar-link">性能优化相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>浏览器缓存</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/" class="sidebar-link">浏览器缓存相关</a></li><li><a href="/personal_learning_blog/浏览器缓存/cachingMode.html" class="sidebar-link">/浏览器缓存/cachingMode.html</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>浏览器渲染</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/" class="sidebar-link">index</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>算法相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/" class="sidebar-link">index</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>封装方法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E5%B0%81%E8%A3%85%E6%96%B9%E6%B3%95/" class="sidebar-link">封装方法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>代码题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E4%BB%A3%E7%A0%81%E9%A2%98/" class="sidebar-link">代码题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>ES6</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/ES6/" class="sidebar-link">ES6</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>js</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/chain/" class="sidebar-link">原型链</a></li><li><a href="/personal_learning_blog/chain/eventloop.html" class="sidebar-link">event-loop</a></li><li><a href="/personal_learning_blog/chain/settimeout.html" class="sidebar-link">setTimeout 经典面试题</a></li><li><a href="/personal_learning_blog/chain/range.html" class="sidebar-link">js作用域</a></li><li><a href="/personal_learning_blog/chain/this.html" class="sidebar-link">this指向</a></li><li><a href="/personal_learning_blog/chain/Array.html" class="active sidebar-link">数组相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_learning_blog/chain/Array.html#数组相关" class="sidebar-link">数组相关</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>CSS</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/CSS/" class="sidebar-link">CSS</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>less</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/less/" class="sidebar-link">index</a></li><li><a href="/personal_learning_blog/less/reactless.html" class="sidebar-link">在react项目中使用less</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/vue/" class="sidebar-link">vue相关试题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/react/" class="sidebar-link">react</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>异步</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/async/" class="sidebar-link">async</a></li><li><a href="/personal_learning_blog/async/promise.html" class="sidebar-link">promise</a></li><li><a href="/personal_learning_blog/async/shouxiePromise.html" class="sidebar-link">手写promise</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>webpack</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/webpack/" class="sidebar-link">Introduction</a></li><li><a href="/personal_learning_blog/webpack/entry.html" class="sidebar-link">entry</a></li><li><a href="/personal_learning_blog/webpack/output.html" class="sidebar-link">output</a></li><li><a href="/personal_learning_blog/webpack/loader.html" class="sidebar-link">loader</a></li><li><a href="/personal_learning_blog/webpack/plugins.html" class="sidebar-link">plugins</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Interview</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/Interview/" class="sidebar-link">Introduction</a></li><li><a href="/personal_learning_blog/Interview/testList.html" class="sidebar-link">面试列表</a></li><li><a href="/personal_learning_blog/Interview/highjs.html" class="sidebar-link">JS高级</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>知识体系总结</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E6%80%BB%E7%BB%93/" class="sidebar-link">一面</a></li><li><a href="/personal_learning_blog/知识体系总结/listOne.html" class="sidebar-link">二面三面</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="数组相关"><a href="#数组相关" aria-hidden="true" class="header-anchor">#</a> 数组相关</h2> <ol><li><p>Array.from()用于将类数组转为真正的数组（<em><strong>所谓类似数组的对象，本质特征只有一点，即必须有length属性</strong></em>）
+常见的类似数组的对象是 DOM 操作返回的 NodeList 集合，以及函数内部的arguments对象</p> <ul><li>判断是否转成真正的数组方法： Object.prototype.toString.call(obj)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>let arrayLike = {
+'0': 'a',
+'1': 'b',
+'2': 'c',
+length: 3
+};
+
+// ES6的写法
+let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
+</code></pre></div></li> <li><p>Array.of()用于将一组值转换为数组，主要是为了弥补数组构造函数Array()和new Array()的不足，</p> <div class="language- extra-class"><pre class="language-text"><code>Array.of() // []
+Array.of(undefined) // [undefined]
+Array.of(1) // [1]
+Array.of(1, 2) // [1, 2]
+</code></pre></div></li> <li><p>Array.copyWithin()在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。也就是说，使用这个方法，会修改当前数组。</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>Array.prototype.copyWithin(target, start = 0, end = this.length)
+</code></pre></div><ul><li><p>它接受三个参数。</p> <ul><li>target（必需）：从该位置开始替换数据。如果为负值，表示倒数。</li> <li>start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示从末尾开始计算。</li> <li>end（可选）：<strong><strong>到该位置前停止读取数据</strong></strong>，默认等于数组长度。如果为负值，表示从末尾开始计算。</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>[1, 2, 3, 4, 5].copyWithin(0, 3)
+// [4, 5, 3, 4, 5]
+</code></pre></div><ol start="4"><li>find()和findIndex():</li></ol> <ul><li>数组实例的find方法，用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。</li> <li>数组实例的findIndex方法的用法与find方法非常类似，返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>[1, 5, 10, 15].find(function(value, index, arr) {
+   return value &gt; 9;
+ }) // 10
+ [1, 5, 10, 15].findIndex(function(value, index, arr) {
+   return value &gt; 9;
+ }) // 2
+</code></pre></div><ol start="5"><li>fill方法使用给定值，填充一个数组。有3个参数，后两个可选（1: 要填充的值 23:用于指定填充的起始位置和结束位置）</li></ol> <div class="language- extra-class"><pre class="language-text"><code>['a', 'b', 'c'].fill(7)
+// [7, 7, 7]
+
+new Array(3).fill(7)
+// [7, 7, 7]
+['a', 'b', 'c'].fill(7, 1, 2)
+// ['a', 7, 'c']
+
+</code></pre></div><ol start="6"><li><p>数组实例的 entries()，keys() 和 values()
+ES6 提供三个新的方法——entries()，keys()和values()——用于遍历数组。它们都返回一个遍历器对象（详见《Iterator》一章），可以用for...of循环进行遍历，唯一的区别是keys()是对键名的遍历、values()是对键值的遍历，entries()是对键值对的遍历。</p> <div class="language- extra-class"><pre class="language-text"><code>for (let index of ['a', 'b'].keys()) {
+console.log(index);
+}
+// 0
+// 1
+
+for (let elem of ['a', 'b'].values()) {
+console.log(elem);
+}
+// 'a'
+// 'b'
+
+for (let [index, elem] of ['a', 'b'].entries()) {
+console.log(index, elem);
+}
+// 0 &quot;a&quot;
+// 1 &quot;b&quot;
+</code></pre></div></li> <li><p>Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值</p> <div class="language- extra-class"><pre class="language-text"><code>[1, 2, 3].includes(2)     // true
+[1, 2, 3].includes(4)     // false
+[1, 2, NaN].includes(NaN) // true
+</code></pre></div></li> <li><p>Array.prototype.flat()用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数据没有影响。</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>[1, 2, [3, 4]].flat()
+// [1, 2, 3, 4]
+
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/wish-lx/personal_learning_blog/edit/master/docs/chain/Array.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">8/25/2019, 8:02:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/personal_learning_blog/chain/this.html" class="prev">
+          this指向
+        </a></span> <span class="next"><a href="/personal_learning_blog/CSS/">
+          CSS
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/personal_learning_blog/assets/js/app.420859d6.js" defer></script><script src="/personal_learning_blog/assets/js/2.8eb86a6e.js" defer></script><script src="/personal_learning_blog/assets/js/14.f1608e8b.js" defer></script>
+  </body>
+</html>

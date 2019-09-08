@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>promise | 个人学习博客</title>
+    <meta name="description" content="个人学习博客">
+    <link rel="icon" href="/personal_learning_blog/logo.png">
+  <link rel="manifest" href="/personal_learning_blog/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/personal_learning_blog/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/personal_learning_blog/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/personal_learning_blog/assets/css/0.styles.c5477ab4.css" as="style"><link rel="preload" href="/personal_learning_blog/assets/js/app.420859d6.js" as="script"><link rel="preload" href="/personal_learning_blog/assets/js/2.8eb86a6e.js" as="script"><link rel="preload" href="/personal_learning_blog/assets/js/12.6902c00c.js" as="script"><link rel="prefetch" href="/personal_learning_blog/assets/js/10.5b292593.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/11.bc4c3461.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/13.3c4d5dda.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/14.f1608e8b.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/15.8109f339.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/16.52c9736c.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/17.fc414205.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/18.d8de3987.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/19.c2f0f6a3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/20.428af1f6.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/21.94511eae.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/22.d52e4e10.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/23.d8b2be21.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/24.a1210960.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/25.f15371b3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/26.e4cced44.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/27.0cc672fa.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/28.d47d3c83.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/29.473e6a29.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/3.cf0a4665.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/30.7a93d3d5.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/31.0fc902e7.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/32.fa7ef45f.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/33.6c11ed80.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/34.46e924c3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/35.b1b3c24a.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/36.8b31cc82.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/37.1560e6a3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/38.9cce7315.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/39.60d3bcd5.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/4.7bf71852.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/5.1cc69f4b.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/6.ca1f9af8.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/7.7d6dcb26.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/8.6623db41.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/9.ba52b70e.js">
+    <link rel="stylesheet" href="/personal_learning_blog/assets/css/0.styles.c5477ab4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/personal_learning_blog/" class="home-link router-link-active"><!----> <span class="site-name">个人学习博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/wish-lx/personal_learning_blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/wish-lx/personal_learning_blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>性能优化</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="sidebar-link">性能优化相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>兼容性问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/" class="sidebar-link">性能优化相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>浏览器缓存</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/" class="sidebar-link">浏览器缓存相关</a></li><li><a href="/personal_learning_blog/浏览器缓存/cachingMode.html" class="sidebar-link">/浏览器缓存/cachingMode.html</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>浏览器渲染</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/" class="sidebar-link">index</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>算法相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/" class="sidebar-link">index</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>封装方法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E5%B0%81%E8%A3%85%E6%96%B9%E6%B3%95/" class="sidebar-link">封装方法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>代码题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E4%BB%A3%E7%A0%81%E9%A2%98/" class="sidebar-link">代码题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>ES6</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/ES6/" class="sidebar-link">ES6</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>js</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/chain/" class="sidebar-link">原型链</a></li><li><a href="/personal_learning_blog/chain/eventloop.html" class="sidebar-link">event-loop</a></li><li><a href="/personal_learning_blog/chain/settimeout.html" class="sidebar-link">setTimeout 经典面试题</a></li><li><a href="/personal_learning_blog/chain/range.html" class="sidebar-link">js作用域</a></li><li><a href="/personal_learning_blog/chain/this.html" class="sidebar-link">this指向</a></li><li><a href="/personal_learning_blog/chain/Array.html" class="sidebar-link">数组相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>CSS</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/CSS/" class="sidebar-link">CSS</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>less</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/less/" class="sidebar-link">index</a></li><li><a href="/personal_learning_blog/less/reactless.html" class="sidebar-link">在react项目中使用less</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/vue/" class="sidebar-link">vue相关试题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/react/" class="sidebar-link">react</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>异步</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/async/" class="sidebar-link">async</a></li><li><a href="/personal_learning_blog/async/promise.html" class="active sidebar-link">promise</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_learning_blog/async/promise.html#promise" class="sidebar-link">promise</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/async/promise.html#_1-什么是promise" class="sidebar-link">1.什么是Promise</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/async/promise.html#promise对象有以下两个特点。" class="sidebar-link">Promise对象有以下两个特点。</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/async/promise.html#all的用法" class="sidebar-link">all的用法</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/async/promise.html#race的用法" class="sidebar-link">race的用法</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/async/promise.html#轮询相关题" class="sidebar-link">轮询相关题</a></li></ul></li><li><a href="/personal_learning_blog/async/shouxiePromise.html" class="sidebar-link">手写promise</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>webpack</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/webpack/" class="sidebar-link">Introduction</a></li><li><a href="/personal_learning_blog/webpack/entry.html" class="sidebar-link">entry</a></li><li><a href="/personal_learning_blog/webpack/output.html" class="sidebar-link">output</a></li><li><a href="/personal_learning_blog/webpack/loader.html" class="sidebar-link">loader</a></li><li><a href="/personal_learning_blog/webpack/plugins.html" class="sidebar-link">plugins</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Interview</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/Interview/" class="sidebar-link">Introduction</a></li><li><a href="/personal_learning_blog/Interview/testList.html" class="sidebar-link">面试列表</a></li><li><a href="/personal_learning_blog/Interview/highjs.html" class="sidebar-link">JS高级</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>知识体系总结</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E6%80%BB%E7%BB%93/" class="sidebar-link">一面</a></li><li><a href="/personal_learning_blog/知识体系总结/listOne.html" class="sidebar-link">二面三面</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="promise"><a href="#promise" aria-hidden="true" class="header-anchor">#</a> promise</h2> <h2 id="_1-什么是promise"><a href="#_1-什么是promise" aria-hidden="true" class="header-anchor">#</a> 1.什么是Promise</h2> <blockquote><p>原文链接：https://blog.csdn.net/qq_34645412/article/details/81170576#commentBox
+Promise 是异步编程的一种解决方案，其实是一个构造函数，自己身上有all、reject、resolve这几个方法，原型上有then、catch等方法。</p></blockquote> <h2 id="promise对象有以下两个特点。"><a href="#promise对象有以下两个特点。" aria-hidden="true" class="header-anchor">#</a> Promise对象有以下两个特点。</h2> <p>（1）对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是Promise这个名字的由来，它的英语意思就是“承诺”，表示其他手段无法改变。</p> <p>（2）一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从pending变为fulfilled和从pending变为rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果，这时就称为 resolved（已定型）。如果改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。</p> <div class="language- extra-class"><pre class="language-text"><code>下面先 new一个Promise
+
+let p = new Promise(function(resolve, reject){
+   	//做一些异步操作
+   	setTimeout(function(){
+   		console.log('执行完成Promise');
+   		resolve('要返回的数据可以任何数据例如接口返回数据');
+   	}, 2000);
+   });
+刷新页面会发现控制台直接打出
+</code></pre></div><p>其执行过程是：执行了一个异步操作，也就是setTimeout，2秒后，输出“执行完成”，并且调用resolve方法。</p> <p>注意！我只是new了一个对象，并没有调用它，我们传进去的函数就已经执行了，这是需要注意的一个细节。所以我们用Promise的时候一般是包在一个函数中，在需要的时候去运行这个函数，如：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div onClick={promiseClick}&gt;开始异步请求&lt;/div&gt;
+ 
+const promiseClick =()=&gt;{
+	 console.log('点击方法被调用')
+	 let p = new Promise(function(resolve, reject){
+		//做一些异步操作
+		setTimeout(function(){
+				console.log('执行完成Promise');
+				resolve('要返回的数据可以任何数据例如接口返回数据');
+			}, 2000);
+		});
+        return p
+	}
+刷新页面的时候是没有任何反映的，但是点击后控制台打出
+</code></pre></div><p>当放在函数里面的时候只有调用的时候才会被执行</p> <p>那么，接下里解决两个问题：</p> <p>1、为什么要放在函数里面</p> <p>2、resolve是个什么鬼</p> <p>我们包装好的函数最后，会return出Promise对象，也就是说，执行这个函数我们得到了一个Promise对象。接下来就可以用Promise对象上有then、catch方法了，这就是Promise的强大之处了，看下面的代码：</p> <div class="language- extra-class"><pre class="language-text"><code>promiseClick().then(function(data){
+    console.log(data);
+    //后面可以用传过来的数据做些其他操作
+    //......
+});
+这样控制台输出
+</code></pre></div><p>先是方法被调用起床执行了promise,最后执行了promise的then方法，then方法是一个函数接受一个参数是接受resolve返回的数据这事就输出了‘要返回的数据可以任何数据例如接口返回数据’</p> <p>这时候你应该有所领悟了，原来then里面的函数就跟我们平时的回调函数一个意思，能够在promiseClick这个异步任务执行完成之后被执行。这就是Promise的作用了，简单来讲，就是能把原来的回调写法分离出来，在异步操作执行完后，用链式调用的方式执行回调函数。</p> <p>你可能会觉得在这个和写一个回调函数没有什么区别；那么，如果有多层回调该怎么办？如果callback也是一个异步操作，而且执行完后也需要有相应的回调函数，该怎么办呢？总不能再定义一个callback2，然后给callback传进去吧。而Promise的优势在于，可以在then方法中继续写Promise对象并返回，然后继续调用then来进行回调操作。</p> <p><strong>所以：精髓在于：Promise只是能够简化层层回调的写法，而实质上，Promise的精髓是“状态”，用维护状态、传递状态的方式来使得回调函数能够及时调用，它比传递callback函数要简单、灵活的多。</strong></p> <p>所以使用Promise的正确场景是这样的：</p> <div class="language- extra-class"><pre class="language-text"><code>promiseClick()
+.then(function(data){
+    console.log(data);
+    return runAsync2();
+})
+.then(function(data){
+    console.log(data);
+    return runAsync3();
+})
+.then(function(data){
+    console.log(data);
+});
+这样能够按顺序，每隔两秒输出每个异步回调中的内容，在runAsync2中传给resolve的数据，能在接下来的then方法中拿到。
+
+</code></pre></div><p>（Ps：此处执行多次是因为研究该用法的时候我在一个react的demo中进行的，该页面多个元素改变导致页面多次渲染执行所致，正常页面只渲染一次的话就所有只会执行一次）</p> <p>reject的用法
+以上是对promise的resolve用法进行了解释，相当于resolve是对promise成功时候的回调，它把promise的状态修改为</p> <p>fullfiled，那么，reject就是失败的时候的回调，他把promise的状态修改为rejected，这样我们在then中就能捕捉到，然后执行“失败”情况的回调。</p> <div class="language- extra-class"><pre class="language-text"><code>function promiseClick(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('数字太于10了即将执行失败回调');
+				}
+			}, 2000);
+		   })
+		   return p
+	   }
+ 
+	promiseClick().then(
+		function(data){
+			console.log('resolved成功回调');
+			console.log('成功回调接受的值：',data);
+		}, 
+		function(reason, data){
+			console.log('rejected失败回调');
+			console.log('失败执行回调抛出失败原因：',reason);
+		}
+	);	
+执行结果：
+
+
+</code></pre></div><p>（PS：此处也是执行多次所以输出多次，执行多次的原因和上次原因一致）</p> <p>以上代码：调用promiseClick方法执行，2秒后获取到一个随机数，如果小于10，我们算成功，调用resolve修改Promise的状态为fullfiled。否则我们认为是“失败”了，调用reject并传递一个参数，作为失败的原因。并将状态改成rejected</p> <p>运行promiseClick并且在then中传了两个参数，这两个参数分别是两个函数，then方法可以接受两个参数，第一个对应resolve的回调，第二个对应reject的回调。（也就是说then方法中接受两个回调，一个成功的回调函数，一个失败的回调函数，并且能在回调函数中拿到成功的数据和失败的原因），所以我们能够分别拿到成功和失败传过来的数据就有以上的运行结果</p> <p>catch的用法
+与Promise对象方法then方法并行的一个方法就是catch,与try  catch类似，catch就是用来捕获异常的，也就是和then方法中接受的第二参数rejected的回调是一样的，如下：</p> <div class="language- extra-class"><pre class="language-text"><code>function promiseClick(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('数字太于10了即将执行失败回调');
+				}
+			}, 2000);
+		   })
+		   return p
+	   }
+ 
+	promiseClick().then(
+		function(data){
+			console.log('resolved成功回调');
+			console.log('成功回调接受的值：',data);
+		}
+	)
+	.catch(function(reason, data){
+		console.log('catch到rejected失败回调');
+		console.log('catch失败执行回调抛出失败原因：',reason);
+	});	
+执行结果：
+</code></pre></div><p>效果和写在then的第二个参数里面一样。它将大于10的情况下的失败回调的原因输出，但是，它还有另外一个作用：在执行resolve的回调（也就是上面then中的第一个参数）时，如果抛出异常了（代码出错了），那么并不会报错卡死js，而是会进到这个catch方法中。如下：</p> <div class="language- extra-class"><pre class="language-text"><code>function promiseClick(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('数字太于10了即将执行失败回调');
+				}
+			}, 2000);
+		   })
+		   return p
+	   }
+ 
+	promiseClick().then(
+		function(data){
+			console.log('resolved成功回调');
+			console.log('成功回调接受的值：',data);
+			console.log(noData);
+		}
+	)
+	.catch(function(reason, data){
+		console.log('catch到rejected失败回调');
+		console.log('catch失败执行回调抛出失败原因：',reason);
+	});	
+执行结果：
+
+</code></pre></div><p>在resolve的回调中，我们console.log(noData);而noData这个变量是没有被定义的。如果我们不用Promise，代码运行到这里就直接在控制台报错了，不往下运行了。但是在这里，会得到上图的结果，也就是说进到catch方法里面去了，而且把错误原因传到了reason参数中。即便是有错误的代码也不会报错了</p> <h2 id="all的用法"><a href="#all的用法" aria-hidden="true" class="header-anchor">#</a> all的用法</h2> <p>Promise.all可以将多个Promise实例包装成一个新的Promise实例。同时，成功和失败的返回值是不同的，成功的时候返回的是一个结果数组，而失败的时候则返回最先被reject失败状态的值。</p> <p>将上述方法复制两份并重命名promiseClick3(), promiseClick2(), promiseClick1()，如下</p> <div class="language- extra-class"><pre class="language-text"><code>function promiseClick1(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('数字太于10了即将执行失败回调');
+				}
+			}, 2000);
+		   })
+		   return p
+	   }
+	   function promiseClick2(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('数字太于10了即将执行失败回调');
+				}
+			}, 2000);
+		   })
+		   return p
+	   }
+	   function promiseClick3(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('数字太于10了即将执行失败回调');
+				}
+			}, 2000);
+		   })
+		   return p
+	   }
+ 
+	Promise
+		.all([promiseClick3(), promiseClick2(), promiseClick1()])
+		.then(function(results){
+			console.log(results);
+		});
+</code></pre></div><p>Promise.all来执行，all接收一个数组参数，这组参数为需要执行异步操作的所有方法，里面的值最终都算返回Promise对象。这样，三个异步操作的并行执行的，等到它们都执行完后才会进到then里面。那么，三个异步操作返回的数据哪里去了呢？都在then里面，all会把所有异步操作的结果放进一个数组中传给then，然后再执行then方法的成功回调将结果接收，结果如下：（分别执行得到结果，all统一执行完三个函数并将值存在一个数组里面返回给then进行回调输出）：</p> <p>这样以后就可以用all并行执行多个异步操作，并且在一个回调中处理所有的返回数据，比如你需要提前准备好所有数据才渲染页面的时候就可以使用all,执行多个异步操作将所有的数据处理好，再去渲染</p> <p></p> <h2 id="race的用法"><a href="#race的用法" aria-hidden="true" class="header-anchor">#</a> race的用法</h2> <p>顾名思义，Promise.race就是赛跑的意思，意思就是说，Promise.race([p1, p2, p3])里面哪个结果获得的快，就返回那个结果，不管结果本身是成功状态还是失败状态。</p> <p>我们将上面的方法延迟分别改成234秒</p> <div class="language- extra-class"><pre class="language-text"><code>function promiseClick1(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('2s随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('2s数字太于10了即将执行失败回调');
+				}
+			}, 2000);
+		   })
+		   return p
+	   }
+	   function promiseClick2(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('3s随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('3s数字太于10了即将执行失败回调');
+				}
+			}, 3000);
+		   })
+		   return p
+	   }
+	   function promiseClick3(){
+		let p = new Promise(function(resolve, reject){
+			setTimeout(function(){
+				var num = Math.ceil(Math.random()*20); //生成1-10的随机数
+				console.log('4s随机数生成的值：',num)
+				if(num&lt;=10){
+					resolve(num);
+				}
+				else{
+					reject('4s数字太于10了即将执行失败回调');
+				}
+			}, 4000);
+		   })
+		   return p
+	   }
+ 
+	Promise
+		.race([promiseClick3(), promiseClick2(), promiseClick1()])
+		.then(function(results){
+			console.log(results);
+		},function(reason){
+			console.log(reason);
+		});
+</code></pre></div><p>当2s后promiseClick1执行完成后就已经进入到了then里面回调，在then里面的回调开始执行时，promiseClick2()和promiseClick3()并没有停止，仍旧再执行。于是再过3秒后，输出了他们各自的回调值</p> <p>race的使用比如可以使用在一个请求在10s内请求成功的话就走then方法，如果10s内没有请求成功的话进入reject回调执行另一个操作</p> <p><strong>Promise也有一些缺点。首先，无法取消Promise，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。第三，当处于pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。</strong></p> <h2 id="轮询相关题"><a href="#轮询相关题" aria-hidden="true" class="header-anchor">#</a> 轮询相关题</h2> <div class="language- extra-class"><pre class="language-text"><code>for(var i=0;i&lt;5;i++){
+  setTimeout(()=&gt;{
+  console.log(i)
+})
+}
+5 5 5 5 5
+因为同步队列的for循环执行完成才轮到异步队列， 每一次for循环的时候，settimeout都执行一次，但是里面的function（闭包函数）没有被执行，而是被放到了任务队列里面，等待执行，当i累加到5的时候跳出循环。此时全局只有一个变量i=&gt;5，所以打印出来都是5
+
+for (let i = 0; i &lt; 5; i++) {     //let 代替 var
+    setTimeout(function (){
+        console.log(i);  
+     },1000);  
+}
+// 0 1 2 3 4
+let 为代码块的作用域，所以每一次 for 循环，console.log(i); 都引用到 for 代码块作用域下的i，因为这样被引用，所以 for 循环结束后，这些作用域在 setTimeout 未执行前都不会被释放。
+
+
+
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/wish-lx/personal_learning_blog/edit/master/docs/async/promise.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">8/29/2019, 2:23:44 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/personal_learning_blog/async/" class="prev router-link-active">
+          async
+        </a></span> <span class="next"><a href="/personal_learning_blog/async/shouxiePromise.html">
+          手写promise
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/personal_learning_blog/assets/js/app.420859d6.js" defer></script><script src="/personal_learning_blog/assets/js/2.8eb86a6e.js" defer></script><script src="/personal_learning_blog/assets/js/12.6902c00c.js" defer></script>
+  </body>
+</html>

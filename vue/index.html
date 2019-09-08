@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue | 个人学习博客</title>
+    <meta name="description" content="个人学习博客">
+    <link rel="icon" href="/personal_learning_blog/logo.png">
+  <link rel="manifest" href="/personal_learning_blog/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/personal_learning_blog/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/personal_learning_blog/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/personal_learning_blog/assets/css/0.styles.c5477ab4.css" as="style"><link rel="preload" href="/personal_learning_blog/assets/js/app.420859d6.js" as="script"><link rel="preload" href="/personal_learning_blog/assets/js/2.8eb86a6e.js" as="script"><link rel="preload" href="/personal_learning_blog/assets/js/23.d8b2be21.js" as="script"><link rel="prefetch" href="/personal_learning_blog/assets/js/10.5b292593.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/11.bc4c3461.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/12.6902c00c.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/13.3c4d5dda.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/14.f1608e8b.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/15.8109f339.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/16.52c9736c.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/17.fc414205.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/18.d8de3987.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/19.c2f0f6a3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/20.428af1f6.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/21.94511eae.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/22.d52e4e10.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/24.a1210960.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/25.f15371b3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/26.e4cced44.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/27.0cc672fa.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/28.d47d3c83.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/29.473e6a29.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/3.cf0a4665.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/30.7a93d3d5.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/31.0fc902e7.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/32.fa7ef45f.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/33.6c11ed80.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/34.46e924c3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/35.b1b3c24a.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/36.8b31cc82.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/37.1560e6a3.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/38.9cce7315.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/39.60d3bcd5.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/4.7bf71852.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/5.1cc69f4b.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/6.ca1f9af8.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/7.7d6dcb26.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/8.6623db41.js"><link rel="prefetch" href="/personal_learning_blog/assets/js/9.ba52b70e.js">
+    <link rel="stylesheet" href="/personal_learning_blog/assets/css/0.styles.c5477ab4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/personal_learning_blog/" class="home-link router-link-active"><!----> <span class="site-name">个人学习博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"> <a href="https://github.com/wish-lx/personal_learning_blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"> <a href="https://github.com/wish-lx/personal_learning_blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>性能优化</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="sidebar-link">性能优化相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>兼容性问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/" class="sidebar-link">性能优化相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>浏览器缓存</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/" class="sidebar-link">浏览器缓存相关</a></li><li><a href="/personal_learning_blog/浏览器缓存/cachingMode.html" class="sidebar-link">/浏览器缓存/cachingMode.html</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>浏览器渲染</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93/" class="sidebar-link">index</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>算法相关</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3/" class="sidebar-link">index</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>封装方法</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E5%B0%81%E8%A3%85%E6%96%B9%E6%B3%95/" class="sidebar-link">封装方法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>代码题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E4%BB%A3%E7%A0%81%E9%A2%98/" class="sidebar-link">代码题</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>ES6</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/ES6/" class="sidebar-link">ES6</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>js</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/chain/" class="sidebar-link">原型链</a></li><li><a href="/personal_learning_blog/chain/eventloop.html" class="sidebar-link">event-loop</a></li><li><a href="/personal_learning_blog/chain/settimeout.html" class="sidebar-link">setTimeout 经典面试题</a></li><li><a href="/personal_learning_blog/chain/range.html" class="sidebar-link">js作用域</a></li><li><a href="/personal_learning_blog/chain/this.html" class="sidebar-link">this指向</a></li><li><a href="/personal_learning_blog/chain/Array.html" class="sidebar-link">数组相关</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>CSS</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/CSS/" class="sidebar-link">CSS</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>less</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/less/" class="sidebar-link">index</a></li><li><a href="/personal_learning_blog/less/reactless.html" class="sidebar-link">在react项目中使用less</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/vue/" class="active sidebar-link">vue相关试题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue自定义指令" class="sidebar-link">vue自定义指令</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue-use-内部原理" class="sidebar-link">vue.use 内部原理</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#虚拟dom相关" class="sidebar-link">虚拟dom相关</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#双向数据绑定原理相关" class="sidebar-link">双向数据绑定原理相关</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue中常见指令" class="sidebar-link">vue中常见指令</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#v-on-v-bind缩写" class="sidebar-link">v-on v-bind缩写</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue里面的计算属性和methods区别" class="sidebar-link">vue里面的计算属性和methods区别</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue中的插槽有几种类型-怎么用" class="sidebar-link">vue中的插槽有几种类型 怎么用</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#如何实现防抖和节流" class="sidebar-link">如何实现防抖和节流</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#事件修饰符的有执行顺序吗" class="sidebar-link">事件修饰符的有执行顺序吗</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#router的replace-和push-有什么区别" class="sidebar-link">router的replace 和push 有什么区别</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vuex的属性，以及分别做什么事" class="sidebar-link">vuex的属性，以及分别做什么事</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue按需加载如何实现" class="sidebar-link">vue按需加载如何实现</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vuex-在浏览器刷新的时候state值会被置成初始化值，如何解决？" class="sidebar-link">vuex  在浏览器刷新的时候state值会被置成初始化值，如何解决？</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#keep-alive-作用以及功能-具体" class="sidebar-link">keep-alive 作用以及功能  具体</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#在项目中遇到的印象深刻的问题-如何解决" class="sidebar-link">在项目中遇到的印象深刻的问题 如何解决</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#怎么给-vue-定义全局的方法？" class="sidebar-link">怎么给 vue 定义全局的方法？</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#怎么解决vue动态设置img的src不生效的问题-为什么不生效" class="sidebar-link">怎么解决vue动态设置img的src不生效的问题,为什么不生效</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue-渲染模板时怎么保留模板中的-html-注释呢？" class="sidebar-link">vue 渲染模板时怎么保留模板中的 HTML 注释呢？</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue-scoped-原理" class="sidebar-link">vue scoped 原理</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#使用jquery和vue框架的区别" class="sidebar-link">使用jquery和vue框架的区别</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#说一下对mvvm的理解" class="sidebar-link">说一下对MVVM的理解</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue的三要素" class="sidebar-link">vue的三要素</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#什么是响应式" class="sidebar-link">什么是响应式</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue中如何解析模版" class="sidebar-link">vue中如何解析模版</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue的整个实现流程" class="sidebar-link">vue的整个实现流程</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue双向数据绑定原理" class="sidebar-link">vue双向数据绑定原理</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#虚拟dom" class="sidebar-link">虚拟dom</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue生命周期函数" class="sidebar-link">vue生命周期函数</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#父组件与子组件生命周期运行的顺序" class="sidebar-link">父组件与子组件生命周期运行的顺序</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue-中怎么重置-data" class="sidebar-link">vue 中怎么重置 data</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue强制刷新组件方法" class="sidebar-link">vue强制刷新组件方法</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue的路由实现" class="sidebar-link">vue的路由实现</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue路由传参的三种方法" class="sidebar-link">vue路由传参的三种方法</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue的路由钩子函数" class="sidebar-link">vue的路由钩子函数</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vuex面试相关" class="sidebar-link">vuex面试相关</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#css只在当前组件起作用？" class="sidebar-link">css只在当前组件起作用？</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#scoped原理" class="sidebar-link">scoped原理</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#v-if和v-show的区别？" class="sidebar-link">v-if和v-show的区别？</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#route和-router的区别" class="sidebar-link">$route和$router的区别</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue-js的两个核心是什么" class="sidebar-link">vue.js的两个核心是什么</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue几种常用的指令" class="sidebar-link">vue几种常用的指令</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue常用的修饰符" class="sidebar-link">vue常用的修饰符</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#v-on可以绑定多个方法吗" class="sidebar-link">v-on可以绑定多个方法吗</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue中key值的作用！！！" class="sidebar-link">vue中key值的作用！！！</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#什么是vue的计算属性" class="sidebar-link">什么是vue的计算属性</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#watch-computed-methods" class="sidebar-link">watch  computed   methods</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#vue等单页面应用及其优缺点" class="sidebar-link">vue等单页面应用及其优缺点</a></li><li class="sidebar-sub-header"><a href="/personal_learning_blog/vue/#浏览器输入url到页面展示发生了些什么" class="sidebar-link">浏览器输入url到页面展示发生了些什么</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/react/" class="sidebar-link">react</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>异步</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/async/" class="sidebar-link">async</a></li><li><a href="/personal_learning_blog/async/promise.html" class="sidebar-link">promise</a></li><li><a href="/personal_learning_blog/async/shouxiePromise.html" class="sidebar-link">手写promise</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>webpack</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/webpack/" class="sidebar-link">Introduction</a></li><li><a href="/personal_learning_blog/webpack/entry.html" class="sidebar-link">entry</a></li><li><a href="/personal_learning_blog/webpack/output.html" class="sidebar-link">output</a></li><li><a href="/personal_learning_blog/webpack/loader.html" class="sidebar-link">loader</a></li><li><a href="/personal_learning_blog/webpack/plugins.html" class="sidebar-link">plugins</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Interview</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/Interview/" class="sidebar-link">Introduction</a></li><li><a href="/personal_learning_blog/Interview/testList.html" class="sidebar-link">面试列表</a></li><li><a href="/personal_learning_blog/Interview/highjs.html" class="sidebar-link">JS高级</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>知识体系总结</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_learning_blog/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E6%80%BB%E7%BB%93/" class="sidebar-link">一面</a></li><li><a href="/personal_learning_blog/知识体系总结/listOne.html" class="sidebar-link">二面三面</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue"><a href="#vue" aria-hidden="true" class="header-anchor">#</a> vue</h1> <h2 id="vue自定义指令"><a href="#vue自定义指令" aria-hidden="true" class="header-anchor">#</a> vue自定义指令</h2> <ol><li>全局自定义指令：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>   Vue.directive('demo',{
+     bind: function(el,binding,vnode,oldVnode){
+
+     }
+     inserted: function(el){
+
+     }
+     update: function(el){
+
+     }
+     componentsUpdated: function(el){
+
+     }
+     unbind: function(el){
+      
+     }
+   })
+</code></pre></div><ol start="2"><li>组件内自定义指令</li></ol> <div class="language- extra-class"><pre class="language-text"><code>  directive:{
+    demo:{
+      inserted: function(el){
+
+      }
+    }
+  }
+</code></pre></div><ul><li>常用钩子函数： bind  unbind   inserted   update componentsUpdated</li> <li>常用钩子函数参数： el  binding vnode oldvnode</li> <li>binding里面常用参数： name  value oldvalue  expression args modifiers</li></ul> <h2 id="vue-use-内部原理"><a href="#vue-use-内部原理" aria-hidden="true" class="header-anchor">#</a> vue.use 内部原理</h2> <div class="language- extra-class"><pre class="language-text"><code>vue.use 内部暴露一个install方法，这个方法的第一个参数是Vue构造器，第二个选项是可选的选项对象
+myPlugin.install=function(Vue,options){
+  // 1. 添加全局方法或属性
+   Vue.myGlobalMethod = function () {
+     // 逻辑...
+   }
+   // 2. 定义全局指令
+ Vue.directive('my-directive', {
+   bind (el, binding, vnode, oldVnode) {
+     // 逻辑...
+   }
+   ...
+ })
+ // 3. 全局混入mixin
+ Vue.mixin({
+   created: function () {
+     // 逻辑...
+   }
+   ...
+ })
+
+ // 4. 添加实例方法
+ Vue.prototype.$myMethod = function (methodOptions) {
+   // 逻辑...
+ }
+ // 5. 注册全局组件
+   Vue.component()
+}
+</code></pre></div><h2 id="虚拟dom相关"><a href="#虚拟dom相关" aria-hidden="true" class="header-anchor">#</a> 虚拟dom相关</h2> <div class="language- extra-class"><pre class="language-text"><code> 1. 为什么要有虚拟dom
+   - 每次DOM操作会引起重绘或者回流，频繁的真实DOM的修改会触发多次的排版和重绘相当耗性能
+   - 使用虚拟dom属性少，真实dom属性多
+ 2. 虚拟dom是什么
+   - 虚拟DOM就是一个JS对象，用一个js对象来描述真实的DOM
+ 3. 虚拟dom为什么会提高性能
+   - 虚拟DOM提高性能，不是说不操作DOM，而是减少操作DOM的次数，减少回流和重
+   - 使用diff算法比较新旧虚拟DOM----即比较两个js对象不怎么耗性能
+ 4. diff算法做了些什么
+   - diff算法指的就是两个虚拟DOM作比对，在diff算法中有个概念就是同级比对，首先比对顶层虚拟DOM节点是否一致，如果一样就接着比对下一层，如果不一样，就停止向下比对，将原始页面中这个DOM及 下面的DOM全部删除掉，重新生成新的虚拟DOM，然后替换掉原始页面的DOM
+   - 存在问题：如果第一层虚拟DOM节点不同，下面的都同，使用虚拟DOM的diff算法，则这些节点都不能使用了，会造成重新渲染的浪费。
+   - 优点：同层虚拟DOM比对，只需要一层层的比较，算法简单，比对的速度快
+   - 虽然会造成重新渲染的浪费，但是会大大减少两个虚拟DOM比对的性能消耗
+  5. 列表中key的作用（虚拟DOM中的列表中同级元素的key值要不同，使用diff算法，判断哪些元素是增删改，从而提高性能）
+    - key是vue用于跟踪哪些元素是增加、删除、修改的辅助标记，需要保证在同级元素中key的唯一性
+    - Diff 算法借助元素的 Key 值判断元素是新增、删除、修改，从而减少不必要的元素重渲染。
+  6. 在循环中key值最好不要用index的原因？（建议使用id或者是不变的值）
+    - 如果key值使用index的话，就可能无法使原始的虚拟DOM中的key值和新的虚拟DOM中的key值一致，从而不能充分发挥diff算法的优势。
+</code></pre></div><h2 id="双向数据绑定原理相关"><a href="#双向数据绑定原理相关" aria-hidden="true" class="header-anchor">#</a> 双向数据绑定原理相关</h2> <div class="language- extra-class"><pre class="language-text"><code> 1. 为什么数据能直接在视图显示
+    - v-model默认绑定了DOM对象（input）的value属性， 当它初次绑定的时候，
+      就会触发getter,watcher就会触发， watcher通知Vue生成新的VDOM树，
+      再通过render函数进行渲染,生成真实DOM
+ 2. 为什么视图修改数据就会修改
+    - 当视图修改是， 意味着DOM的value属性值改变，就会触发setter,watcher监听机制就会执行
+      watcher通知Vue生成新的VDOM树，再通过render函数进行渲染,生成真实DOM
+ 3. 使用v-model实现
+
+</code></pre></div><h2 id="vue中常见指令"><a href="#vue中常见指令" aria-hidden="true" class="header-anchor">#</a> vue中常见指令</h2> <ul><li>v-if指令 v-show指令 v-else指令 v-for指令</li> <li>v-bind指令 v-model v-on指令</li> <li>v-text指令</li></ul> <h2 id="v-on-v-bind缩写"><a href="#v-on-v-bind缩写" aria-hidden="true" class="header-anchor">#</a> v-on v-bind缩写</h2> <h2 id="vue里面的计算属性和methods区别"><a href="#vue里面的计算属性和methods区别" aria-hidden="true" class="header-anchor">#</a> vue里面的计算属性和methods区别</h2> <ul><li>computed计算属性的缓存原理在我们处理大量数据的时候使用可以大大提高效率，不必在数据没有发生改变的时候重新获取数据的值，可直接获取到结果，并且只执行绑定依赖的方法。methods里方法在依赖的值改变后，只有设置触发才会重新执行methods里相关的方法。</li></ul> <h2 id="vue中的插槽有几种类型-怎么用"><a href="#vue中的插槽有几种类型-怎么用" aria-hidden="true" class="header-anchor">#</a> vue中的插槽有几种类型 怎么用</h2> <h2 id="如何实现防抖和节流"><a href="#如何实现防抖和节流" aria-hidden="true" class="header-anchor">#</a> 如何实现防抖和节流</h2> <h2 id="事件修饰符的有执行顺序吗"><a href="#事件修饰符的有执行顺序吗" aria-hidden="true" class="header-anchor">#</a> 事件修饰符的有执行顺序吗</h2> <h2 id="router的replace-和push-有什么区别"><a href="#router的replace-和push-有什么区别" aria-hidden="true" class="header-anchor">#</a> router的replace 和push 有什么区别</h2> <ul><li>router.go(n)这个方法的参数是一个整数，意思是在 history记录中向前或者后退多少步，类似 window.history.go(n)</li> <li>router.push(location)
+想要导航到不同的 URL，则使用 router.push 方法。这个方法会向 history 栈添加一个新的记录，所以，当用户点击浏览器后退按钮时，则回到之前的 URL。</li> <li>router.replace(location) 跟 router.push 很像，唯一的不同就是，它不会向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录</li></ul> <h2 id="vuex的属性，以及分别做什么事"><a href="#vuex的属性，以及分别做什么事" aria-hidden="true" class="header-anchor">#</a> vuex的属性，以及分别做什么事</h2> <ul><li>Vuex有五个核心概念，state, getters, mutations, actions, modules</li> <li>state =&gt; 基本数据
+getters =&gt; 从基本数据派生的数据
+mutations =&gt; 提交更改数据的方法，同步！
+actions =&gt; 像一个装饰器，包裹mutations，使之可以异步。
+modules =&gt; 模块化Vuex</li></ul> <h2 id="vue按需加载如何实现"><a href="#vue按需加载如何实现" aria-hidden="true" class="header-anchor">#</a> vue按需加载如何实现</h2> <h2 id="vuex-在浏览器刷新的时候state值会被置成初始化值，如何解决？"><a href="#vuex-在浏览器刷新的时候state值会被置成初始化值，如何解决？" aria-hidden="true" class="header-anchor">#</a> vuex  在浏览器刷新的时候state值会被置成初始化值，如何解决？</h2> <ul><li>存储在localStorage  sessionStorage  cookie中</li></ul> <h2 id="keep-alive-作用以及功能-具体"><a href="#keep-alive-作用以及功能-具体" aria-hidden="true" class="header-anchor">#</a> keep-alive 作用以及功能  具体</h2> <p>是 Vue 内置的一个组件，可以使被包含的组件保留状态，或避免重新渲染。</p> <h2 id="在项目中遇到的印象深刻的问题-如何解决"><a href="#在项目中遇到的印象深刻的问题-如何解决" aria-hidden="true" class="header-anchor">#</a> 在项目中遇到的印象深刻的问题 如何解决</h2> <ul><li>input框输入问题</li></ul> <h2 id="怎么给-vue-定义全局的方法？"><a href="#怎么给-vue-定义全局的方法？" aria-hidden="true" class="header-anchor">#</a> 怎么给 vue 定义全局的方法？</h2> <ul><li>第一种：直接挂载到vue.prototype上</li></ul> <div class="language- extra-class"><pre class="language-text"><code> 在main.js里进行全局注册
+ Vue.prototype.funcName = function (){}
+ 在所有组件里可调用
+ this.funcName();
+
+</code></pre></div><ul><li>第一种方法延伸：把方法定义到一个公用组件上，在main.js中引入该文件，并挂载到vue.prototype上，在所需要的文件中直接调用方法</li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+// 导入共用组件
+import global from './common.vue'
+Vue.prototype.COMMON = global
+使用：
+export default {
+data () {
+  return {
+    username: '',
+    password: '',
+    // 赋值使用, 可以使用this变量来访问
+    globalHttpUrl: this.COMMON.httpUrl
+  }
+},
+</code></pre></div><ul><li>第二种: 使用全局混入Mixin</li></ul> <div class="language- extra-class"><pre class="language-text"><code>创建filter.js文件
+import { typeConfig } from &quot;./config&quot;
+export default {
+  filters: {
+    $_filterType: (value) =&gt; {
+      return typeConfig[value] || &quot;type undefined&quot;
+    }
+  }
+}
+最后，在 main.js 中引入我们的 filters 方法集
+
+import filter from &quot;./filters&quot;
+Vue.mixin(filter)
+接下来，我们就可以在 .vue 的模板文件中随意使用自定义函数了
+
+&lt;template&gt;
+  &lt;div&gt;{{typeStatus | $_filterType}}&lt;div&gt;
+&lt;/template&gt;
+</code></pre></div><h2 id="怎么解决vue动态设置img的src不生效的问题-为什么不生效"><a href="#怎么解决vue动态设置img的src不生效的问题-为什么不生效" aria-hidden="true" class="header-anchor">#</a> 怎么解决vue动态设置img的src不生效的问题,为什么不生效</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;img class=&quot;logo&quot; :src=&quot;logo&quot; alt=&quot;公司logo&quot;&gt;
+export default {
+  name: &quot;HelloWorld&quot;,
+  data() {
+    return {
+      logo:require(&quot;./../assets/images/logo.png&quot;),
+    };
+  }
+};
+&lt;/script&gt;
+因为动态添加src被当做静态资源处理了，没有进行编译
+解决方法： imgSrc写成require('path')
+</code></pre></div><h2 id="vue-渲染模板时怎么保留模板中的-html-注释呢？"><a href="#vue-渲染模板时怎么保留模板中的-html-注释呢？" aria-hidden="true" class="header-anchor">#</a> vue 渲染模板时怎么保留模板中的 HTML 注释呢？</h2> <ul><li>comments当设为 true 时，将会保留且渲染模板中的 HTML 注释。默认行为是舍弃它们。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;script&gt;
+  export default{
+    name: 'hello'
+    comments: true
+    data(){
+      return {
+
+      }
+    }
+  }
+&lt;/script&gt;
+</code></pre></div><h2 id="vue-scoped-原理"><a href="#vue-scoped-原理" aria-hidden="true" class="header-anchor">#</a> vue scoped 原理</h2> <ul><li>作用： 实现组件私有化，不对全局造成样式污染</li> <li>具体原理： vue通过在DOM结构以及css样式上加上唯一的标记，保证唯一，达到样式私有化，不污染全局的作用</li></ul> <h2 id="使用jquery和vue框架的区别"><a href="#使用jquery和vue框架的区别" aria-hidden="true" class="header-anchor">#</a> 使用jquery和vue框架的区别</h2> <ul><li>数据和视图的分离，解藕（开放封闭原则）</li> <li>以数据驱动视图，只关心数据变化， DOM操作被封装</li></ul> <h2 id="说一下对mvvm的理解"><a href="#说一下对mvvm的理解" aria-hidden="true" class="header-anchor">#</a> 说一下对MVVM的理解</h2> <ul><li>mvc基本介绍
+<ul><li>view： view视图 界面</li> <li>model：数据模型</li> <li>control：控制器（逻辑处理）</li></ul></li> <li>mvvm基本介绍
+<ul><li>View：视图 模版（视图和模型是分离的）
+<ul><li>通过事件绑定影响model</li></ul></li> <li>Model：模型，数据
+<ul><li>通过事件绑定影响model</li></ul></li> <li>ViewModel：连接Model和View（连接器）</li></ul></li></ul> <h2 id="vue的三要素"><a href="#vue的三要素" aria-hidden="true" class="header-anchor">#</a> vue的三要素</h2> <ul><li>响应式： vue如何监听到data的每个属性变化</li> <li>模版引擎： vue的模版如何被解析，指令如何处理</li> <li>渲染：vue的模版如何被渲染成html，以及渲染过程</li></ul> <h2 id="什么是响应式"><a href="#什么是响应式" aria-hidden="true" class="header-anchor">#</a> 什么是响应式</h2> <ul><li>修改data属性之后，vue立刻监听到</li> <li>data属性被代理到vm上</li> <li>object.defineProperty模拟实现（响应式模拟）</li></ul> <div class="language- extra-class"><pre class="language-text"><code>    var vm= {}
+    var data = {
+        name: 'zhangsan',
+        age: 'lisi'
+    }
+    
+    var key，  value
+    for（key in value）{
+        function(key){
+            Object.defineProperty(vm, key, {
+                get: function(){
+                    console.log('get', data[key])   //监听
+                    return data[key]
+                }
+                set: function(newVal){
+                    console.log('set', newVal)   //监听
+                    data[key] = newVal
+                }
+            }){
+                
+            }
+        }(key)
+    }
+</code></pre></div><h2 id="vue中如何解析模版"><a href="#vue中如何解析模版" aria-hidden="true" class="header-anchor">#</a> vue中如何解析模版</h2> <ul><li><p>模版是什么</p> <ul><li>本质是字符串</li> <li>有逻辑，v-if  v-for等</li> <li>与html格式很像，但有很大区别，html是静态的，vue是动态的</li> <li>最终还是要转化为html来展示</li> <li></li> <li>模版最终要转换为js代码原因：
+<ul><li>有逻辑 v-ifv-for ，必须用js才能实现（图灵完备）</li> <li>转换为html渲染页面，必须由js实现</li> <li>因此模版最终要转换为一个js函数（render函数）</li></ul></li></ul></li> <li><p>render函数</p></li> <li><p>vdom</p></li></ul> <h2 id="vue的整个实现流程"><a href="#vue的整个实现流程" aria-hidden="true" class="header-anchor">#</a> vue的整个实现流程</h2> <ul><li>解析模版成render函数
+<ul><li>width的用法</li> <li>模版中的所有信息都被render函数包含</li> <li>模版中用到的data的属性，全都变成js变量</li> <li>模版中的v-if v-for  v-on，全部都变成了js逻辑</li> <li>render函数返回vnode</li></ul></li> <li>响应式开始监听</li> <li>object.defineProperty</li> <li>将data的属性代理到vm上</li> <li>首次渲染，显示页面，且绑定依赖</li> <li>data属性变化，触发rerender</li></ul> <h2 id="vue双向数据绑定原理"><a href="#vue双向数据绑定原理" aria-hidden="true" class="header-anchor">#</a> vue双向数据绑定原理</h2> <ul><li>vue.js 则是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。</li></ul> <h2 id="虚拟dom"><a href="#虚拟dom" aria-hidden="true" class="header-anchor">#</a> 虚拟dom</h2> <ol><li>未使用v-dom时，遇到的问题：</li></ol> <pre><code>-  dom操作是昂贵的
+- 尽量减少dom操作，而不是‘推倒重来’
+- 项目越复杂，影响越严重  
+</code></pre> <ol start="2"><li>vdom是什么</li></ol> <pre><code> - virtual dom ，虚拟dom            
+ - 用js模拟dom结构
+ - dom变化的对比，放在js层来做
+ - 提高重绘性能
+</code></pre> <ol start="3"><li>为什么会存在vdom</li></ol> <pre><code> - dom操作非常昂贵
+ - 将dom对比变化的操作放在js层来做，提高效率
+</code></pre> <ol start="4"><li>v-dom为何使用diff算法：</li></ol> <pre><code> - dom操作时昂贵的，因此尽量减少操作dom
+ - 找出这次dom必须更新的节点来更新，其他的不更新
+ - 这个找出的过程就需要diff算法
+</code></pre> <h2 id="vue生命周期函数"><a href="#vue生命周期函数" aria-hidden="true" class="header-anchor">#</a> vue生命周期函数</h2> <p>Vue实例有一个完整的生命周期，也就是说从开始创建、初始化数据、编译模板、挂载DOM、渲染-更新-渲染、卸载等一系列过程，我们成为Vue 实例的生命周期，钩子就是在某个阶段给你一个做某些处理的机会。</p> <ol><li>beforeCreate( 创建前 )</li></ol> <ul><li>在实例初始化之后，数据观测和事件配置之前被调用，vue中的data和methods都取不到，且在watch之前执行</li></ul> <ol start="2"><li>created ( 创建后 ）</li></ol> <ul><li>实例创建完成之后立即被调用，在这一步，实例已完成：数据观测、属性和方法的运算，watch/event事件回调，然而，挂载阶段还没有开始, $el属性目前不可见；但是可以获取vue中的data，调用methods方法，获取原本html上加载出来的dom，但无法获取通过挂载模版生成的dom</li></ul> <ol start="3"><li>beforeMount（挂载前）</li></ol> <ul><li>挂载开始之前被调用，相关的render函数首次被调用（虚拟DOM），实例已完成以下的配置： 编译模板，把data里面的数据和模板生成html，完成了el和data 初始化，注意此时还没有挂在html到页面上。</li></ul> <ol start="4"><li>mounted（挂载后）-- vue组件已经初始化完毕，创建阶段已完成</li></ol> <ul><li>el被新创建的vm.$el替换，并挂载到实例上之后调用该钩子。
+注意： mounted不会承诺所有的子组件也都一起被挂载，若希望整个视图都渲染完毕，可用vm.$nextTick替换mounted</li></ul> <ol start="5"><li>beforeUpdata （更新前）-- 运行阶段</li></ol> <ul><li>数据更新之前被调用，运用在更新之前访问现有的dom</li></ul> <ol start="6"><li>updated （更新后）-- 运行阶段</li></ol> <ul><li>在由于数据更改导致地虚拟DOM重新渲染和打补丁只会调用，调用时，组件DOM已经更新，所以可以执行依赖于DOM的操作，然后在大多是情况下，应该避免在此期间更改状态，因为这可能会导致更新无限循环，该钩子在服务器端渲染期间不被调用
+注意：updated不会承诺所有的子组件也都一起被重绘</li></ul> <ol start="7"><li>beforeDestrioy （销毁前）-- 销毁阶段</li></ol> <ul><li>在实例销毁之前调用，实例仍然完全可用
+这一步还可以用this来获取实例，
+一般在这一步做一些重置的操作，比如清除掉组件中的定时器  和 监听的dom事件</li></ul> <ol start="8"><li>destrioyed （销毁后）-- 销毁阶段</li></ol> <ul><li>实例已经被完全销毁了，组件中的数据、方法、指令、过滤器等全部都不可用了</li> <li>在实例销毁之后调用，调用后，所以的事件监听器会被移出，所有的子实例也会被销毁，该钩子在服务器端渲染期间不被调用</li></ul> <h2 id="父组件与子组件生命周期运行的顺序"><a href="#父组件与子组件生命周期运行的顺序" aria-hidden="true" class="header-anchor">#</a> 父组件与子组件生命周期运行的顺序</h2> <ol><li>加载渲染过程</li></ol> <pre><code>- 父beforeCreate-&gt;父created-&gt;父beforeMount-&gt;子beforeCreate-&gt;子created-&gt;子beforeMount-&gt;子mounted-&gt;父mounted
+</code></pre> <ol start="2"><li>子组件更新过程</li></ol> <pre><code>- 父beforeUpdate-&gt;子beforeUpdate-&gt;子updated-&gt;父updated
+</code></pre> <ol start="3"><li>父组件更新过程</li></ol> <pre><code>- 父beforeUpdate-&gt;父updated
+</code></pre> <ol start="4"><li>销毁过程</li></ol> <pre><code>- 父beforeDestroy-&gt;子beforeDestroy-&gt;子destroyed-&gt;父destroyed
+</code></pre> <h2 id="vue-中怎么重置-data"><a href="#vue-中怎么重置-data" aria-hidden="true" class="header-anchor">#</a> vue 中怎么重置 data</h2> <div class="language- extra-class"><pre class="language-text"><code>  Object.assign(this.$data, this.$options.data())
+</code></pre></div><ol><li><p>Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象。它将返回目标对象。 Object.assign(target, …sources)； 参数： target =&gt; 目标对象。 sources =&gt; 源对象。 返回值: 目标对象。</p></li> <li><p>vm.$data 类型：Object 详细：Vue 实例观察的数据对象。Vue 实例代理了对其 data 对象属性的访问。</p></li> <li><p>vm.$options 类型：Object 只读 详细： 用于当前 Vue 实例的初始化选项。需要在选项中包含自定义属性时会有用处：</p></li></ol> <h2 id="vue强制刷新组件方法"><a href="#vue强制刷新组件方法" aria-hidden="true" class="header-anchor">#</a> vue强制刷新组件方法</h2> <ol><li>使用this.$forceUpdate强制重新渲染
+如果要在组件内部中进行强制刷新，则可以调用this.$forceUpdate()强制重新渲染组件，从而达到更新目的。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+&lt;button @click=&quot;reload()&quot;&gt;刷新当前组件&lt;/button&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+    name: 'comp',
+    methods: {
+        reload() {
+            this.$forceUpdate()
+        }
+    }
+}
+&lt;/script&gt;
+</code></pre></div><ol start="2"><li>使用v-if指令
+如果是刷新某个子组件，则可以通过v-if指令实现。我们知道，当v-if的值发生变化时，组件都会被重新渲染一遍。因此，利用v-if指令的特性，可以达到强制刷新组件的目的。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;comp v-if=&quot;update&quot;&gt;&lt;/comp&gt;
+    &lt;button @click=&quot;reload()&quot;&gt;刷新comp组件&lt;/button&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import comp from '@/views/comp.vue'
+export default {
+    name: 'parentComp',
+    data() {
+        return {
+            update: true
+        }
+    },
+    methods: {
+        reload() {
+            // 移除组件
+            this.update = false
+            // 在组件移除后，重新渲染组件
+            // this.$nextTick可实现在DOM 状态更新后，执行传入的方法。
+            this.$nextTick(() =&gt; {
+                this.update = true
+            })
+        }
+    }
+}
+&lt;/script&gt;
+</code></pre></div><h2 id="vue的路由实现"><a href="#vue的路由实现" aria-hidden="true" class="header-anchor">#</a> vue的路由实现</h2> <ul><li><p>hash ——即地址栏URL中的#符号。比如这个URL：http://www.abc.com/#/hello, hash 的值为#/hello。它的特点在于：hash 虽然出现URL中，但不会被包含在HTTP请求中，对后端完全没有影响，因此改变hash不会重新加载页面。</p></li> <li><p>history ——利用了HTML5 History Interface 中新增的pushState() 和replaceState() 方法。（需要特定浏览器支持）            这两个方法应用于浏览器的历史记录站，在当前已有的back、forward、go 的基础之上，它们提供了对历史记录进行修改的功能。只是当它们执行修改是，虽然改变了当前的URL，但你浏览器不会立即向后端发送请求。          history模式，会出现404 的情况，需要后台配置。</p></li> <li><p>404 错误</p> <ul><li><p>hash模式下，仅hash符号之前的内容会被包含在请求中，如 http://www.abc.com, 因此对于后端来说，即使没有做到对路由的全覆盖，也不会返回404错误；</p></li> <li><p>history模式下，前端的url必须和实际向后端发起请求的url 一致，如http://www.abc.com/book/id 。如果后端缺少对/book/id 的路由处理，将返回404错误。</p></li></ul></li></ul> <h2 id="vue路由传参的三种方法"><a href="#vue路由传参的三种方法" aria-hidden="true" class="header-anchor">#</a> vue路由传参的三种方法</h2> <ul><li>直接在路由中写参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;li v-for=&quot;article in articles&quot; @click=&quot;getDescribe(article.id)&quot;&gt;
+ getDescribe(id) {
+//   直接调用$router.push 实现携带参数的跳转
+        this.$router.push({
+          path: `/describe/${id}`,
+ })
+//在router---&gt;index.js进行配置
+ {
+     path: '/describe/:id',
+     name: 'Describe',
+     component: Describe
+   }
+
+
+//通过this.$route.prams.id取值
+</code></pre></div><ul><li>通过prams传参</li></ul> <div class="language- extra-class"><pre class="language-text"><code>this.$router.push({
+          name: 'Describe',
+          params: {
+            id: id
+          }
+ })
+//在router---&gt;index.js进行配置
+{
+     path: '/describe',
+     name: 'Describe',
+     component: Describe
+}
+//通过this.$route.prams.id取值
+</code></pre></div><ul><li>通过query传参</li></ul> <div class="language- extra-class"><pre class="language-text"><code>this.$router.push({
+          path: '/describe',
+          query: {
+            id: id
+  }
+//在router---&gt;index.js进行配置
+{
+     path: '/describe',
+     name: 'Describe',
+     component: Describe
+ }
+//通过this.$route.query.id取值
+</code></pre></div><h2 id="vue的路由钩子函数"><a href="#vue的路由钩子函数" aria-hidden="true" class="header-anchor">#</a> vue的路由钩子函数</h2> <h2 id="vuex面试相关"><a href="#vuex面试相关" aria-hidden="true" class="header-anchor">#</a> vuex面试相关</h2> <p>-（1）vuex是什么？怎么使用？哪种功能场景使用它？</p> <p>vue框架中状态管理。在main.js引入store，注入。新建一个目录store，….. export 。场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车</p> <ul><li>（2）vuex有哪几种属性？</li></ul> <p>有五种，分别是 State、 Getter、Mutation 、Action、 Module</p> <ul><li><p>vuex的State特性</p> <ul><li><p>A、Vuex就是一个仓库，仓库里面放了很多对象。其中state就是数据源存放地，对应于一般Vue对象里面的data</p></li> <li><p>B、state里面存放的数据是响应式的，Vue组件从store中读取数据，若是store中的数据发生改变，依赖这个数据的组件也会发生更新</p></li> <li><p>C、它通过mapState把全局的 state 和 getters 映射到当前组件的 computed 计算属性中</p></li></ul></li> <li><p>vuex的Getter特性</p> <ul><li><p>A、getters可以对State进行计算操作，它就是Store的计算属性</p></li> <li><p>B、 虽然在组件内也可以做计算属性，但是getters 可以在多组件之间复用</p></li> <li><p>C、 如果一个状态只在一个组件内使用，是可以不用getters</p></li></ul></li> <li><p>vuex的Mutation特性</p> <ul><li>Action 类似于 mutation，不同在于：Action 提交的是 mutation，而不是直接变更状态；Action 可以包含任意异步操作。</li></ul></li> <li><p>（3）不用Vuex会带来什么问题？</p> <ul><li><p>可维护性会下降，想修改数据要维护三个地方；</p></li> <li><p>可读性会下降，因为一个组件里的数据，根本就看不出来是从哪来的；</p></li> <li><p>增加耦合，大量的上传派发，会让耦合性大大增加，本来Vue用Component就是为了减少耦合，现在这么用，和组件化的初衷相背。</p></li></ul></li></ul> <h2 id="css只在当前组件起作用？"><a href="#css只在当前组件起作用？" aria-hidden="true" class="header-anchor">#</a> css只在当前组件起作用？</h2> <div class="language- extra-class"><pre class="language-text"><code>   当前组件&lt;style&gt;写成&lt;style  scoped&gt; 
+</code></pre></div><h2 id="scoped原理"><a href="#scoped原理" aria-hidden="true" class="header-anchor">#</a> scoped原理</h2> <ul><li><p>从原理可见，之所以scoped可达到类似组件私有化、样式设置“作用域”的效果，其实只是在设置scoped属性的组件上的所有标签添加一的data开头的属性，且在标签选择器的结尾加上和属性同样的字段，起到唯一性的作用，但是这样如果组件中也引用其他组建就会出现类似下面的问题：</p></li> <li><p>父组件无scoped属性，子组件带有scoped，父组件是无法操作子组件的样式的（原因在原理中可知），虽然我们可以在全局中通过该类标签的标签选择器设置样式，但会影响到其他组件</p></li> <li><p>父组件有scoped属性，子组件无，父组件也无法设置子组件样式，因为父组件的所有标签都会带有data-v-469af010唯一标志，但子组件不会带有这个唯一标志属性，与1同理，虽然我们可以在全局中通过该类标签的标签选择器设置样式，但会影响到其他组件</p></li> <li><p>父子组件都有，同理也无法设置样式，更改起来增加代码量</p></li></ul> <h2 id="v-if和v-show的区别？"><a href="#v-if和v-show的区别？" aria-hidden="true" class="header-anchor">#</a> v-if和v-show的区别？</h2> <ul><li>v-if的显示和隐藏是在dom里创建和消除dom节点</li> <li>v-show是用css样式的display来控制dom节点的显示和隐藏</li></ul> <h2 id="route和-router的区别"><a href="#route和-router的区别" aria-hidden="true" class="header-anchor">#</a> $route和$router的区别</h2> <ul><li>在任何组件内通过 this.$router访问路由器，也可以通过 this.$route 访问当前路由</li></ul> <h2 id="vue-js的两个核心是什么"><a href="#vue-js的两个核心是什么" aria-hidden="true" class="header-anchor">#</a> vue.js的两个核心是什么</h2> <ul><li>数据驱动</li> <li>组件系统</li></ul> <h2 id="vue几种常用的指令"><a href="#vue几种常用的指令" aria-hidden="true" class="header-anchor">#</a> vue几种常用的指令</h2> <ul><li>v-text v-html v-bind v-on v-model v-for</li></ul> <h2 id="vue常用的修饰符"><a href="#vue常用的修饰符" aria-hidden="true" class="header-anchor">#</a> vue常用的修饰符</h2> <h2 id="v-on可以绑定多个方法吗"><a href="#v-on可以绑定多个方法吗" aria-hidden="true" class="header-anchor">#</a> v-on可以绑定多个方法吗</h2> <ul><li>可以</li></ul> <h2 id="vue中key值的作用！！！"><a href="#vue中key值的作用！！！" aria-hidden="true" class="header-anchor">#</a> vue中key值的作用！！！</h2> <ul><li>需要提供一个唯一的key值（常用ID），以便它能跟踪每个节点的身份，从而重用和重新排序现有元素</li></ul> <h2 id="什么是vue的计算属性"><a href="#什么是vue的计算属性" aria-hidden="true" class="header-anchor">#</a> 什么是vue的计算属性</h2> <h2 id="watch-computed-methods"><a href="#watch-computed-methods" aria-hidden="true" class="header-anchor">#</a> watch  computed   methods</h2> <ol><li>作用机制上</li></ol> <ul><li>watch和computed都是以Vue的依赖追踪机制为基础的，它们都试图处理这样一件事情：当某一个数据（称它为依赖数据）发生变化的时候，所有依赖这个数据的“相关”数据“自动”发生变化，也就是自动调用相关的函数去实现数据的变动。</li> <li>对methods:methods里面是用来定义函数的，很显然，它需要手动调用才能执行。而不像watch和computed那样，“自动执行”预先定义的函数</li> <li>总结：methods里面定义的函数，是需要主动调用的，而和watch和computed相关的函数，会自动调用,完成我们希望完成的作用</li></ul> <ol start="2"><li>watch computed
+<ul><li>相同点： 首先它们都是以Vue的依赖追踪机制为基础的，它们的共同点是：都是希望在依赖数据发生改变的时候，被依赖的数据根据预先定义好的函数，发生“自动”的变化</li> <li>不同点：watch和computed各自处理的数据关系场景不同
+1. watch擅长处理的场景：一个数据影响多个数据
+2. computed擅长处理的场景：一个数据受多个数据影响</li></ul></li></ol> <h2 id="vue等单页面应用及其优缺点"><a href="#vue等单页面应用及其优缺点" aria-hidden="true" class="header-anchor">#</a> vue等单页面应用及其优缺点</h2> <ul><li>优点：</li></ul> <p>Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件，核心是一个响应的数据绑定系统。MVVM、数据驱动、组件化、轻量、简洁、高效、快速、模块友好。</p> <ul><li>缺点：</li></ul> <p>不支持低版本的浏览器，最低只支持到IE9；不利于SEO的优化（如果要支持SEO，建议通过服务端来进行渲染组件）；第一次加载首页耗时相对长一些；不可以使用浏览器的导航按钮需要自行实现前进、后退。</p> <h2 id="浏览器输入url到页面展示发生了些什么"><a href="#浏览器输入url到页面展示发生了些什么" aria-hidden="true" class="header-anchor">#</a> 浏览器输入url到页面展示发生了些什么</h2></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/wish-lx/personal_learning_blog/edit/master/docs/vue/index.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">9/1/2019, 1:27:01 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/personal_learning_blog/less/reactless.html" class="prev">
+          在react项目中使用less
+        </a></span> <span class="next"><a href="/personal_learning_blog/react/">
+          react
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/personal_learning_blog/assets/js/app.420859d6.js" defer></script><script src="/personal_learning_blog/assets/js/2.8eb86a6e.js" defer></script><script src="/personal_learning_blog/assets/js/23.d8b2be21.js" defer></script>
+  </body>
+</html>
